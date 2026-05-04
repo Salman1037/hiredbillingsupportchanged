@@ -23,12 +23,9 @@ const SALARY_OPTIONS = [
 ];
 
 const INDUSTRY_OPTIONS = [
-  { label: 'Medical / Healthcare', multiplier: 1.38 },
-  { label: 'Legal', multiplier: 1.42 },
-  { label: 'Finance & Accounting', multiplier: 1.35 },
-  { label: 'Technology', multiplier: 1.30 },
-  { label: 'Real Estate', multiplier: 1.25 },
-  { label: 'E-commerce / Retail', multiplier: 1.20 },
+  { label: 'Medical', multiplier: 1.38 },
+  { label: 'Dental', multiplier: 1.34 },
+  { label: 'Insurance', multiplier: 1.36 },
   { label: 'Other', multiplier: 1.22 },
 ];
 
