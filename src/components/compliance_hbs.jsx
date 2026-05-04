@@ -78,9 +78,24 @@ function ComplianceHbs() {
 
 				.trust-grid {
 					display: grid;
-					grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+					/* Force six columns on wide screens to show all six trust items in one row */
+					grid-template-columns: repeat(6, minmax(0, 1fr));
 					gap: 20px;
 					margin-top: 24px;
+				}
+
+				/* Responsive fallbacks */
+				@media (max-width: 1200px) {
+					.trust-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+				}
+				@media (max-width: 900px) {
+					.trust-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+				}
+				@media (max-width: 640px) {
+					.trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+				}
+				@media (max-width: 420px) {
+					.trust-grid { grid-template-columns: 1fr; }
 				}
 
 				.trust-item {
@@ -139,7 +154,26 @@ function ComplianceHbs() {
 			`}</style>
 			<div className="section-container">
 				<div className="section-header">
-					<h2>Built for healthcare compliance</h2>
+					<h2 style={{ display: 'inline-block', lineHeight: 1.1 }}>
+						<span
+							style={{
+								background: '#3498db',
+								WebkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}
+						>
+							Built for healthcare&nbsp;
+						</span>
+						<span
+							style={{
+								background: '#1abc9c',
+								WebkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}
+						>
+							compliance
+						</span>
+					</h2>
 					<p>Your data security and privacy are our foundation</p>
 				</div>
 				<div className="trust-grid">

@@ -106,7 +106,7 @@ const Card = ({ item, type, index, visible }) => {
             fontFamily: heroFontStack,
             fontWeight: 600,
             fontSize: '14.5px',
-            color: '#0F172A',
+            color: '#4D9BD6',
             marginBottom: '5px',
             lineHeight: 1.35,
           }}
@@ -159,7 +159,7 @@ const Problemsolution = () => {
     fontFamily: heroFontStack,
     fontWeight: 900,
     fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
-    color: '#0F172A',
+    color: '#199A6F', // fallback for var(--primary)
     lineHeight: 1.1,
     marginBottom: '14px',
     letterSpacing: '-0.5px',
@@ -175,8 +175,8 @@ const Problemsolution = () => {
 
   const badgeBase = {
     display: 'inline-block',
-    padding: '6px 16px',
-    borderRadius: '8px',
+    padding: '7px 16px',
+    borderRadius: '10px',
     fontSize: '11px',
     fontWeight: 700,
     letterSpacing: '1.5px',
@@ -184,7 +184,8 @@ const Problemsolution = () => {
     fontFamily: heroFontStack,
     textTransform: 'uppercase',
     border: '1px solid currentColor',
-    opacity: 0.85,
+    opacity: 1,
+    boxShadow: '0 2px 10px rgba(15, 23, 42, 0.06)',
   };
 
   return (
@@ -242,10 +243,29 @@ const Problemsolution = () => {
                 background: 'linear-gradient(180deg, #4D9BD6, #3B82F6)',
               }} />
               <div style={{ marginBottom: '28px', paddingLeft: '12px' }}>
-                <span style={{ ...badgeBase, background: 'transparent', color: 'var(--brand-blue)', borderColor: 'var(--brand-blue)' }}>
+                <span style={{ ...badgeBase, background: '#EFF6FF', color: '#2563EB', borderColor: '#BFDBFE' }}>
                   The Problem
                 </span>
-                <h3 style={headStyle}>Your growth is outpacing your workforce</h3>
+                <h3 style={{ ...headStyle, lineHeight: 1.1 }}>
+                  <span
+                    style={{
+                      background: '#3498db',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    Your growth is outpacing&nbsp;
+                  </span>
+                  <span
+                    style={{
+                      background: '#1abc9c',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    your workforce
+                  </span>
+                </h3>
                 <p style={subStyle}>
                   Administrative workload is expanding faster than internal capacity. Overtime, delays, and quality
                   issues become routine and compliance risk increases.
@@ -277,10 +297,29 @@ const Problemsolution = () => {
                 background: 'linear-gradient(180deg, #22C55E, #10B981)',
               }} />
               <div style={{ marginBottom: '28px', paddingLeft: '12px' }}>
-                <span style={{ ...badgeBase, background: 'transparent', color: 'var(--brand-green)', borderColor: 'var(--brand-green)' }}>
+                <span style={{ ...badgeBase, background: '#ECFDF5', color: '#059669', borderColor: '#A7F3D0' }}>
                   The Solution
                 </span>
-                <h3 style={headStyle}>A workforce infrastructure built to scale</h3>
+                <h3 style={{ ...headStyle, lineHeight: 1.1 }}>
+                  <span
+                    style={{
+                      background: '#3498db',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    A workforce infrastructure&nbsp;
+                  </span>
+                  <span
+                    style={{
+                      background: '#1abc9c',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    built to scale
+                  </span>
+                </h3>
                 <p style={subStyle}>
                   Hired Billing Support provides trained, compliant professionals inside a managed operating environment so work gets
                   done reliably without adding overhead or risk.

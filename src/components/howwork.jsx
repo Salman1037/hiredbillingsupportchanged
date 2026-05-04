@@ -6,32 +6,32 @@ import {
 
 const services = [
   {
-    icon: <FaPhoneAlt color="#199A6F" />,
+    icon: <FaPhoneAlt color="#4D9BD6" />,
     title: 'Patient Call Handling',
     desc: 'Professional answering, scheduling, and follow-up. Zero dropped calls.',
   },
   {
-    icon: <FaClipboardList color="#199A6F" />,
+    icon: <FaClipboardList color="#4D9BD6" />,
     title: 'Appointment Scheduling',
     desc: 'Optimized scheduling, confirmations, and reminders. 98% show-up rate.',
   },
   {
-    icon: <FaLock color="#199A6F" />,
+    icon: <FaLock color="#4D9BD6" />,
     title: 'Insurance Verification',
     desc: 'Pre-authorization, benefits verification, eligibility checking. Done before visit.',
   },
   {
-    icon: <FaCreditCard color="#199A6F" />,
+    icon: <FaCreditCard color="#4D9BD6" />,
     title: 'Billing & Claims',
     desc: 'Accurate coding, claim submission, compliance. HIPAA-certified.',
   },
   {
-    icon: <FaBolt color="#199A6F" />,
+    icon: <FaBolt color="#4D9BD6" />,
     title: 'Denial Management',
     desc: 'AI-powered appeals, root cause analysis, prevention. 45% denial reduction.',
   },
   {
-    icon: <FaChartLine color="#199A6F" />,
+    icon: <FaChartLine color="#4D9BD6" />,
     title: 'AR & Reporting',
     desc: 'Real-time dashboards, KPI tracking, predictive forecasts. Full visibility.',
   },
@@ -39,25 +39,25 @@ const services = [
 
 const timeline = [
   {
-    icon: <FaSearch color="#199A6F" />,
+    icon: <FaSearch color="#4D9BD6" />,
     number: 1,
     title: 'Discovery & Assessment',
     desc: 'We audit your current workflows, identify bottlenecks, and create a roadmap.',
   },
   {
-    icon: <FaUsers color="#199A6F" />,
+    icon: <FaUsers color="#4D9BD6" />,
     number: 2,
     title: 'Team Onboarding',
     desc: 'Dedicated team trained on your EHR, systems, and workflows. Day-one productivity.',
   },
   {
-    icon: <FaPlug color="#199A6F" />,
+    icon: <FaPlug color="#4D9BD6" />,
     number: 3,
     title: 'Integration & Coordination',
     desc: 'Seamless integration with your systems. Daily check-ins. Real-time problem-solving.',
   },
   {
-    icon: <FaRocket color="#199A6F" />,
+    icon: <FaRocket color="#4D9BD6" />,
     number: 4,
     title: 'Optimize & Scale',
     desc: 'Continuous improvements, proactive optimization, and scaling as you grow.',
@@ -118,7 +118,7 @@ const styles = {
   cardTitle: {
     fontSize: '1.2rem',
     marginBottom: '1rem',
-    color: '#199A6F', // fallback for var(--primary)
+    color: '#4D9BD6', // fallback for var(--primary)
     fontWeight: 700,
   },
   cardDesc: {
@@ -147,7 +147,7 @@ const styles = {
   timelineNumber: {
     fontSize: '1.5rem',
     fontWeight: 700,
-    color: '#199A6F', // fallback for var(--secondary)
+    color: '#4D9BD6', // fallback for var(--secondary)
     marginBottom: '0.5rem',
     display: 'flex',
     alignItems: 'center',
@@ -157,7 +157,7 @@ const styles = {
   timelineTitle: {
     fontSize: '1.1rem',
     marginBottom: '1rem',
-    color: '#199A6F', // fallback for var(--primary)
+    color: '#4D9BD6', // fallback for var(--primary)
     fontWeight: 700,
   },
   timelineDesc: {
@@ -220,7 +220,27 @@ export default function SolutionAndHowItWorks() {
       <section style={styles.section} id="solution">
         <div style={styles.container}>
           <div style={styles.header}>
-            <h2 style={styles.h2}>We manage your practice operations end-to-end</h2>
+            <h2 style={{ ...styles.h2, display: 'inline-block', lineHeight: 1.1 }}>
+              <span
+                style={{
+                  background: '#3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                We manage your practice operations&nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: '#1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                end-to-end
+              </span>
+            </h2>
             <p style={styles.p}>From first patient call to final payment — fully managed</p>
           </div>
           <div style={styles.grid}>
@@ -246,7 +266,27 @@ export default function SolutionAndHowItWorks() {
       <section style={{ ...styles.section, background: '#fff' }} id="how">
         <div style={styles.container}>
           <div style={styles.header}>
-            <h2 style={styles.h2}>We work as your in-house team, without the overhead</h2>
+            <h2 style={{ ...styles.h2, display: 'inline-block', lineHeight: 1.1 }}>
+              <span
+                style={{
+                  background: '#3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                We work as your in-house team,&nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: '#1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                without the overhead
+              </span>
+            </h2>
             <p style={styles.p}>Not a separate vendor. An extension of your practice.</p>
           </div>
           <div style={styles.timeline}>

@@ -66,7 +66,7 @@ const headline = {
   fontFamily: 'Inter, Open Sans, Arial, sans-serif',
   fontWeight: 900,
   fontSize: 'clamp(2.6rem, 5.8vw, 4.4rem)',
-  color: '#199A6F',
+  color: '#4D9BD6',
   lineHeight: 1.02,
   marginBottom: 0,
   letterSpacing: '-0.08em',

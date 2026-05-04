@@ -34,7 +34,7 @@ const styles = {
     borderLeft: '4px solid #199A6F', // fallback for var(--secondary)
   },
   highlightText: {
-    color: '#199A6F', // fallback for var(--primary)
+    color: '#4D9BD6', // fallback for var(--primary)
     fontWeight: 600,
     margin: 0,
   },
@@ -113,7 +113,11 @@ export default function AiSection() {
     <section style={styles.section}>
       <div style={styles.container}>
         <div style={styles.content}>
-          <h2 style={styles.h2}>You're now in an AI vs AI environment</h2>
+          <h2 style={{ ...styles.h2, lineHeight: 1.1 }}>
+            <span style={{ color: '#3498db' }}>You're now in an </span>
+            <span style={{ color: '#1abc9c' }}>AI vs AI</span>
+            <span style={{ color: '#3498db' }}> environment</span>
+          </h2>
           <p style={styles.p}>
             Doctors are using AI to streamline workflows. Insurance companies are using AI to increase denials and delay reimbursements.
           </p>

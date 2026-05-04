@@ -3,32 +3,32 @@ import { FaPhoneSlash, FaMoneyBillWave, FaBalanceScale, FaTired, FaSearch, FaBul
 
 const problems = [
   {
-    icon: <FaPhoneSlash color="#199A6F" />,
+    icon: <FaPhoneSlash color="#4D9BD6" />,
     title: 'Calls Dropping',
     desc: "Patients can't reach you. Appointments go unmade. Revenue is lost before it starts.",
   },
   {
-    icon: <FaMoneyBillWave color="#199A6F" />,
+    icon: <FaMoneyBillWave color="#4D9BD6" />,
     title: 'Revenue Leakage',
     desc: "Claims sit unprocessed. Insurance companies delay reimbursement. No visibility on money owed.",
   },
   {
-    icon: <FaBalanceScale color="#199A6F" />,
+    icon: <FaBalanceScale color="#4D9BD6" />,
     title: 'High Denials',
     desc: "Insurance companies use AI to increase denials. Claims get rejected for simple mistakes.",
   },
   {
-    icon: <FaTired color="#199A6F" />,
+    icon: <FaTired color="#4D9BD6" />,
     title: 'Staff Burnout',
     desc: "Your team is overwhelmed managing billing, scheduling, and insurance. Turnover is high.",
   },
   {
-    icon: <FaSearch color="#199A6F" />,
+    icon: <FaSearch color="#4D9BD6" />,
     title: 'No Visibility',
     desc: "You don't know your financial metrics. AR days, denial rates, forecast — all a mystery.",
   },
   {
-    icon: <FaBullseye color="#199A6F" />,
+    icon: <FaBullseye color="#4D9BD6" />,
     title: 'System Chaos',
     desc: "Multiple vendors, fragmented systems, no coordination. Each department works in silos.",
   },
@@ -80,7 +80,7 @@ const styles = {
   cardTitle: {
     fontSize: '1.3rem',
     marginBottom: '1rem',
-    color: '#199A6F', // fallback for var(--primary)
+    color: '#4D9BD6', // fallback for var(--primary)
     fontWeight: 700,
     display: 'flex',
     alignItems: 'center',
@@ -100,7 +100,27 @@ export default function ProblemSection() {
     <section style={styles.section} id="problem">
       <div style={styles.container}>
         <div style={styles.header}>
-          <h2 style={styles.h2}>Running a practice is operationally complex</h2>
+          <h2 style={{ ...styles.h2, display: 'inline-block', lineHeight: 1.1 }}>
+            <span
+              style={{
+                background: '#3498db',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Running a practice&nbsp;
+            </span>
+
+            <span
+              style={{
+                background: '#1abc9c',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              is operationally complex
+            </span>
+          </h2>
           <p style={styles.p}>You're managing challenges that have nothing to do with patient care</p>
         </div>
         <div style={styles.grid}>

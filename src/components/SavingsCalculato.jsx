@@ -160,8 +160,8 @@ const SavingsCalculator = () => {
           <div className="sc-header">
             <span className="sc-eyebrow">See Your Savings</span>
             <h2 className="sc-heading">
-              How much could you save{' '}
-              <span className="sc-heading-accent">with HBS?</span>
+              <span className="sc-heading-blue">How much could you save&nbsp;</span>
+              <span className="sc-heading-green">with HBS?</span>
             </h2>
             <p className="sc-subhead">
               Plug in your numbers. Get your answer in seconds.
@@ -387,8 +387,15 @@ const CSS = `
     margin-bottom: 14px;
   }
 
-  .sc-heading-accent {
-    background: linear-gradient(135deg, #199A6F 0%, #208664 100%);
+  .sc-heading-blue {
+    background: #3498db;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .sc-heading-green {
+    background: #1abc9c;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

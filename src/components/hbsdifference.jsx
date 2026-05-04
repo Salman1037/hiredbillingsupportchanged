@@ -92,7 +92,8 @@ const styles = {
     minWidth: 18,
   },
   iconCross: {
-    color: '#7c3aed',
+    /* Use site blue instead of purple */
+    color: '#3498db',
     fontWeight: 'bold',
     fontSize: '1.1rem',
     minWidth: 18,
@@ -125,7 +126,26 @@ export default function HbsDifference() {
       `}</style>
       <div style={styles.container}>
         <div style={styles.header}>
-          <h2 style={styles.h2}>Why HBS is different from traditional RCM</h2>
+          <h2 style={{ ...styles.h2, display: 'inline-block', lineHeight: 1.1 }}>
+            <span
+              style={{
+                background: '#3498db',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Why HBS is different&nbsp;
+            </span>
+            <span
+              style={{
+                background: '#1abc9c',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              from traditional RCM
+            </span>
+          </h2>
           <p style={styles.p}>We're not a billing company. We're your operations partner.</p>
         </div>
         <div style={styles.grid} className="hbs-diff-grid">

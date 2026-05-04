@@ -3,86 +3,57 @@ import { FaStar, FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 const reviews = [
   {
-    name: "Dr. Jyothi Mamidi Juarez",
-    title: "Partners in Endocrinology",
-    avatar: "JM",
-    highlight: "↑ 30% efficiency increase",
+    name: "Dr Ruth - Edwin DMD/MS",
+    title: "Diplomate of American Board of Periodontology",
+    avatar: "RE",
+    highlight: "↑ More appointments captured",
     highlightType: "up",
     highlightColor: "#d1fae5",
     review: (
       <>
-        I consider HBS a <b>concierge-level partner</b>. They go above and beyond a typical VA company. The talent is phenomenal.
+        Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.
       </>
     ),
     stars: 5,
   },
   {
-    name: "Jose Melendez",
-    title: "Founder, Melendez Insurance",
-    avatar: "JM",
-    highlight: "↑ 30% YoY growth",
+    name: "Herma Thompson PMHNP-BC",
+    title: "Nurse Practitioner - Psych/Mental Health",
+    avatar: "HT",
+    highlight: "↑ Streamlined billing operations",
     highlightType: "up",
     highlightColor: "#d1fae5",
     review: (
       <>
-        If we <b>never hired through HBS</b>, we wouldn't be in the growth stage we are right now.
+        Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.
       </>
     ),
     stars: 5,
   },
   {
-    name: "Dr. Naureen Alim",
-    title: "Rheumatologist, CLS Health",
-    avatar: "NA",
-    highlight: "↓ 50% staffing cost",
-    highlightType: "down",
-    highlightColor: "#eef2ff",
-    review: (
-      <>
-        The biggest difference is <b>peace of mind</b>. I stopped searching locally for talent.
-      </>
-    ),
-    stars: 5,
-  },
-  // Add 3 more reviews for a total of 6
-  {
-    name: "Dr. Alex Kim",
-    title: "Cardiologist, HeartCare",
-    avatar: "AK",
-    highlight: "↑ 25% patient satisfaction",
+    name: "Dr Afreen Sheikh",
+    title: "Internal Medicine",
+    avatar: "AS",
+    highlight: "↑ More bedside time",
     highlightType: "up",
     highlightColor: "#d1fae5",
     review: (
       <>
-        HBS helped us <b>streamline our workflow</b> and improve patient satisfaction.
+        Remote staffing solution by HBS has freed the resources of the HBS, enabling us to spend more time at the bedside and enhance the efficiency of the whole process.
       </>
     ),
     stars: 5,
   },
   {
-    name: "Sarah Lee",
-    title: "COO, MedPrime",
-    avatar: "SL",
-    highlight: "↑ 40% process automation",
+    name: "Dr. Layla Hassan",
+    title: "Genesis Internal Medicine",
+    avatar: "LH",
+    highlight: "↑ Practice growth with HBS",
     highlightType: "up",
     highlightColor: "#d1fae5",
     review: (
       <>
-        Their <b>automation solutions</b> saved us countless hours every month.
-      </>
-    ),
-    stars: 5,
-  },
-  {
-    name: "Michael Chen",
-    title: "Practice Manager, Chen Clinic",
-    avatar: "MC",
-    highlight: "↓ 20% admin overhead",
-    highlightType: "down",
-    highlightColor: "#eef2ff",
-    review: (
-      <>
-        We <b>reduced admin overhead</b> and focused more on patient care thanks to HBS.
+        With the help of HBS their support and expertise we have achieved a lot more in practice.
       </>
     ),
     stars: 5,
@@ -169,9 +140,26 @@ const ClientReview = () => (
         }
       }
     `}</style>
-    <h2 style={{ textAlign: "center", fontSize: "clamp(2rem, 3vw, 2.7rem)", fontWeight: 900, marginBottom: 8, color: "#0f172a", letterSpacing: -1 }}>
-      Don't take our word for it.<br />
-      <span style={{ color: "#199A6F" }}>Take <b>theirs</b>.</span>
+    <h2 style={{ textAlign: "center", fontSize: "clamp(2rem, 3vw, 2.7rem)", fontWeight: 900, marginBottom: 8, letterSpacing: -1, lineHeight: 1.1 }}>
+      <span
+        style={{
+          background: "#3498db",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+      >
+        Don't take our word for it.
+      </span>
+      <br />
+      <span
+        style={{
+          background: "#1abc9c",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+      >
+        Take <b>theirs</b>.
+      </span>
     </h2>
     <p style={{ textAlign: "center", color: "#64748b", margin: "0 auto", maxWidth: 700, padding: "0 20px", fontSize: "1.03rem", lineHeight: 1.6 }}>
       Real feedback from healthcare and operations teams that rely on HBS every day.
