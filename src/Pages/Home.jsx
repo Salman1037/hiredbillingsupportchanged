@@ -20,6 +20,8 @@ import SolutionAndHowItWorks from "../components/howwork";
 import HbsDifference from "../components/hbsdifference";
 import ClientReview from "../components/client_review";
 import ComplianceHbs from "../components/compliance_hbs";
+import Difference from "../components/difference";
+
 
 function Home() {
   return (
@@ -46,7 +48,7 @@ function Home() {
       {/* <PricingDemoForm/> */}
      <SavingsCalculato/>
       <ComplianceHbs/>
-     
+     <Difference/>
  <ClientReview/>
       <Faq/>
      

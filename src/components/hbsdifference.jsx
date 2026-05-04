@@ -92,8 +92,8 @@ const styles = {
     minWidth: 18,
   },
   iconCross: {
-    /* Use site blue instead of purple */
-    color: '#3498db',
+    /* Use site red for cross icons */
+    color: '#ef4444',
     fontWeight: 'bold',
     fontSize: '1.1rem',
     minWidth: 18,
