@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import hipaaImg from '../assets/images/hero/HPPPA.png';
 import soc2Img from '../assets/images/hero/ASIPA.png';
 import iso27001Img from '../assets/images/hero/1S027001.png';
-
 const certifications = [
   { id: 1, image: hipaaImg, alt: 'HIPAA Compliant', label: 'HIPAA' },
   { id: 2, image: soc2Img, alt: 'AICPA SOC 2', label: 'SOC 2' },

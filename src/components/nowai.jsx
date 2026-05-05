@@ -39,10 +39,10 @@ const styles = {
     margin: 0,
   },
   visual: {
-    background: "#00f5a0",
+    background: "linear-gradient(90deg, var(--primary-blue), var(--primary-green))",
     padding: '3rem',
     borderRadius: 12,
-    color: '#fff',
+    // color: '#',
     textAlign: 'center',
   },
   h3: {
@@ -61,7 +61,7 @@ const styles = {
     padding: '1.5rem',
     borderRadius: 8,
     border: '1px solid rgba(255,255,255,0.2)',
-    color: '#fff',
+    // color: '#fff',
     textAlign: 'left',
   },
   itemH4: {
@@ -82,7 +82,7 @@ const styles = {
     content: "'✓'",
     position: 'absolute',
     left: 0,
-    color: '#4ade80',
+    color: '#fff',
     fontWeight: 'bold',
   },
   // Responsive
