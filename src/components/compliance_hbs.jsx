@@ -46,7 +46,7 @@ function ComplianceHbs() {
 		<section className="trust">
 			<style>{`
 				.trust {
-					padding: clamp(48px, 8vw, 88px) clamp(20px, 5vw, 48px);
+					padding: clamp(40px, 6vw, 64px) clamp(20px, 5vw, 48px);
 					background: radial-gradient(circle at top left, #ecfdf5 0%, #f8fafc 48%, #ffffff 100%);
 				}
 

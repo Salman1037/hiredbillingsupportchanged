@@ -63,7 +63,7 @@ const Card = ({ item, type, index, visible }) => {
         display: 'flex',
         alignItems: 'flex-start',
         gap: '14px',
-        padding: '18px 20px',
+        padding: 'clamp(40px, 6vw, 64px) 2rem',
         borderRadius: '14px',
         border: `1px solid ${hovered ? (isProblem ? '#FCA5A5' : 'var(--brand-green-light)') : 'var(--brand-blue-pale)'}`,
         background: hovered ? (isProblem ? '#FFFBFB' : 'var(--brand-green-light)') : '#FFFFFF',

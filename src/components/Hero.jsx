@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import { FaTooth, FaStethoscope, FaShieldAlt } from 'react-icons/fa';
 import { createPortal } from 'react-dom';
-import DrAfreenImage from '../assets/images/avatar/dr-afreen.jpg';
-import DrNagwaImage from '../assets/images/avatar/dr-nagwa.jpg';
-import DrNaikImage from '../assets/images/avatar/dr-naik.jpg';
+import DrAfreenImage from '../assets/images/avatar/img1.webp';
+import DrNagwaImage from '../assets/images/avatar/img2.webp';
+import DrNaikImage from '../assets/images/avatar/img3.webp';
 
 // --- Styles ---
 const heroSection = {
@@ -63,7 +63,6 @@ const badge = {
   letterSpacing: 0.1,
 };
 const headline = {
-  fontFamily: 'Inter, Open Sans, Arial, sans-serif',
   fontWeight: 900,
   fontSize: 'clamp(2.6rem, 5.8vw, 4.4rem)',
   color: '#4D9BD6',
@@ -73,7 +72,6 @@ const headline = {
   maxWidth: 560,
 };
 const subtext = {
-  fontFamily: 'Inter, Open Sans, Arial, sans-serif',
   fontWeight: 400,
   fontSize: 'clamp(1.05rem, 2vw, 1.35rem)',
   color: '#52525B',
@@ -151,15 +149,15 @@ const topCardWrap = {
   zIndex: 2,
 };
 const card = {
-  background: '#fff',
-  borderRadius: 24, // Softer corners
-  boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)',
-  border: '1.5px solid #F3F0FF', // Subtle border
-  padding: '16px 16px 14px 16px',
+  background: 'transparent', // No background
+  borderRadius: 24,
+  boxShadow: 'none', // No shadow
+  border: 'none', // No border
+  padding: 0, // No padding
   minWidth: 180,
   maxWidth: 210,
-  minHeight: 250, // Increased height for larger portrait treatment
-  height: 250,
+  minHeight: 280, // Increased height
+  height: 280,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -179,28 +177,20 @@ const cardBadge = {
 };
 const cardImg = {
   width: '100%',
-  height: 150,
+  height: '100%', // Fill the container
   borderRadius: 18,
   objectFit: 'cover',
-  marginBottom: 12,
+  boxShadow: '0 8px 32px 0 rgba(0,0,0,0.15)', // Add shadow to image directly
   background: '#F4F4F5',
 };
 const cardName = {
-  fontWeight: 700,
-  fontSize: 16,
-  color: '#18181B',
-  marginBottom: 2,
+  display: 'none', // Hide details
 };
 const cardRole = {
-  fontWeight: 400,
-  fontSize: 14,
-  color: '#52525B',
-  marginBottom: 4,
+  display: 'none', // Hide details
 };
 const cardTags = {
-  display: 'flex',
-  gap: 6,
-  marginTop: 2,
+  display: 'none', // Hide details
 };
 const tag = {
   fontSize: 12,
@@ -241,14 +231,15 @@ function Hero() {
       transition: box-shadow 0.32s cubic-bezier(.4,1,.4,1), transform 0.32s cubic-bezier(.4,1,.4,1), border 0.22s;
     }
     .hero-card:hover {
-      box-shadow: 0 12px 36px 0 rgba(139,92,246,0.22), 0 2px 8px 0 rgba(0,0,0,0.12);
-      border: 1.5px solid #4D9BD6;
       transform: translateY(-10px) scale(1.045);
       z-index: 3;
     }
+    .hero-card:hover .hero-card-img {
+      box-shadow: 0 12px 36px 0 rgba(139,92,246,0.22), 0 2px 8px 0 rgba(0,0,0,0.12);
+    }
     /* Top card gradient */
     .hero-card.top-card {
-      background: linear-gradient(135deg, #F8FAFF 60%, #F3E8FF 100%);
+      background: transparent;
     }
     /* Smooth button hover */
     .hero-btn, .hero-btn-secondary {
@@ -431,18 +422,16 @@ function Hero() {
             <div style={topCardWrap}>
               <div style={{
                 ...card,
-                boxShadow: '0 12px 36px 0 rgba(139,92,246,0.13)',
                 minWidth: 240,
                 maxWidth: 270,
-                minHeight: 300,
-                height: 300,
+                minHeight: 330, // Increased height
+                height: 330,
                 marginBottom: 0,
                 position: 'relative',
                 zIndex: 2,
                 ...floatingCard
               }} className="hero-card top-card">
-                <div style={cardBadge}>Certified & Ready</div>
-                <img src={DrAfreenImage} alt="Dr. Afreen Sheikh" style={cardImg} />
+                <img src={DrAfreenImage} alt="Dr. Afreen Sheikh" style={cardImg} className="hero-card-img" />
                 <div style={cardName}>Dr. Afreen Sheikh</div>
                 <div style={cardRole}>Patient Care Assistant</div>
                 <div style={cardTags}>
@@ -453,8 +442,8 @@ function Hero() {
               </div>
             </div>
             <div style={cardRow}>
-              <div style={{...card, marginTop: 0, minWidth: 180, maxWidth: 210, minHeight: 250, height: 250, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)', position: 'relative', zIndex: 1, ...animatedCardDelay(0.3)}} className="hero-card">
-                <img src={DrNagwaImage} alt="Nagwa S. Awad" style={cardImg} />
+              <div style={{...card, marginTop: 0, minWidth: 220, maxWidth: 250, minHeight: 310, height: 310, position: 'relative', zIndex: 1, ...animatedCardDelay(0.3)}} className="hero-card">
+                <img src={DrNagwaImage} alt="Nagwa S. Awad" style={cardImg} className="hero-card-img" />
                 <div style={cardName}>Nagwa S. Awad</div>
                 <div style={cardRole}>Treatment Coordinator</div>
                 <div style={cardTags}>
@@ -463,8 +452,8 @@ function Hero() {
                   <span style={tagGreen}>Certified</span>
                 </div>
               </div>
-              <div style={{...card, marginTop: 0, minWidth: 180, maxWidth: 210, minHeight: 250, height: 250, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)', position: 'relative', zIndex: 1, ...animatedCardDelay(0.5)}} className="hero-card">
-                <img src={DrNaikImage} alt="Dr. Harmesh Naik" style={cardImg} />
+              <div style={{...card, marginTop: 0, minWidth: 220, maxWidth: 250, minHeight: 310, height: 310, position: 'relative', zIndex: 1, ...animatedCardDelay(0.5)}} className="hero-card">
+                <img src={DrNaikImage} alt="Dr. Harmesh Naik" style={cardImg} className="hero-card-img" />
                 <div style={cardName}>Dr. Harmesh Naik</div>
                 <div style={cardRole}>Insurance Auditor</div>
                 <div style={cardTags}>

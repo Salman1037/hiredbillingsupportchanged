@@ -3,7 +3,6 @@ import {
   FaPhoneAlt, FaClipboardList, FaLock, FaCreditCard, FaBolt, FaChartLine,
   FaSearch, FaUsers, FaPlug, FaRocket
 } from 'react-icons/fa';
-
 const services = [
   {
     icon: <FaPhoneAlt color="#4D9BD6" />,
@@ -66,8 +65,8 @@ const timeline = [
 
 const styles = {
   section: {
-    padding: '6rem 2rem',
-    background: '#f8fafc', // fallback for var(--gray-lighter)
+    padding: 'clamp(48px, 8vw, 88px) clamp(20px, 5vw, 48px)',
+    background: '#f8fafc',
   },
   container: {
     maxWidth: 1400,
@@ -75,94 +74,22 @@ const styles = {
   },
   header: {
     textAlign: 'center',
-    marginBottom: '4rem',
+    marginBottom: '32px',
   },
   h2: {
-    fontSize: '2.5rem',
-    marginBottom: '1rem',
-    color: '#199A6F', // fallback for var(--primary)
+    fontFamily: "'Inter', 'Open Sans', Arial, sans-serif",
+    fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
     fontWeight: 900,
+    color: '#0f172a',
+    letterSpacing: '-0.02em',
+    margin: '0 0 10px 0',
   },
   p: {
-    fontSize: '1.1rem',
-    color: '#64748b', // fallback for var(--text-secondary)
+    fontFamily: "'Inter', 'Open Sans', Arial, sans-serif",
+    fontSize: '1rem',
+    color: '#475569',
     maxWidth: 600,
     margin: '0 auto',
-  },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '2rem',
-    marginTop: '3rem',
-  },
-  card: {
-    background: '#fff',
-    padding: '2rem',
-    borderRadius: 12,
-    textAlign: 'center',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-    transition: 'transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s cubic-bezier(.2,.8,.2,1), border-color 0.28s cubic-bezier(.2,.8,.2,1), background-color 0.28s cubic-bezier(.2,.8,.2,1)',
-    border: '2px solid transparent',
-    position: 'relative',
-    overflow: 'hidden',
-    willChange: 'transform, box-shadow, border-color',
-  },
-  icon: {
-    fontSize: '2.6rem',
-    marginBottom: '1rem',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: 'transform 0.28s cubic-bezier(.2,.8,.2,1), color 0.28s cubic-bezier(.2,.8,.2,1)',
-  },
-  cardTitle: {
-    fontSize: '1.2rem',
-    marginBottom: '1rem',
-    color: '#4D9BD6', // fallback for var(--primary)
-    fontWeight: 700,
-  },
-  cardDesc: {
-    color: '#64748b', // fallback for var(--text-secondary)
-    fontSize: '0.95rem',
-  },
-  timeline: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '2rem',
-    marginTop: '3rem',
-    position: 'relative',
-  },
-  timelineItem: {
-    background: '#fff',
-    padding: '2rem',
-    borderRadius: 12,
-    border: '2px solid #e5e7eb', // fallback for var(--border-color)
-    position: 'relative',
-    zIndex: 1,
-    textAlign: 'center',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
-    transition: 'transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s cubic-bezier(.2,.8,.2,1), border-color 0.28s cubic-bezier(.2,.8,.2,1)',
-    willChange: 'transform, box-shadow, border-color',
-  },
-  timelineNumber: {
-    fontSize: '1.5rem',
-    fontWeight: 700,
-    color: '#4D9BD6', // fallback for var(--secondary)
-    marginBottom: '0.5rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-  },
-  timelineTitle: {
-    fontSize: '1.1rem',
-    marginBottom: '1rem',
-    color: '#4D9BD6', // fallback for var(--primary)
-    fontWeight: 700,
-  },
-  timelineDesc: {
-    color: '#64748b', // fallback for var(--text-secondary)
-    fontSize: '0.95rem',
   },
 };
 
@@ -170,57 +97,104 @@ export default function SolutionAndHowItWorks() {
   return (
     <>
       <style>{`
-        .how-card:hover {
-          transform: translateY(-10px) scale(1.015);
-          border-color: #1ac98f;
-          box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-          background: linear-gradient(180deg, #ffffff 0%, #f9fffc 100%);
+        .how-work-section {
+          padding: clamp(40px, 6vw, 64px) 2rem;
+          background: #f8fafc;
         }
 
-        .how-card:hover .how-card-icon {
-          transform: translateY(-2px) scale(1.06);
+        .how-work-section--white {
+          background: #ffffff;
         }
 
-        .how-card:hover .how-card-title {
-          color: #0f766e;
+        .how-work-container {
+          max-width: 1100px;
+          margin: 0 auto;
         }
 
-        .how-card:hover .how-card-desc {
+        .how-work-header {
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        .how-work-header h2 {
+          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-size: clamp(1.8rem, 3vw, 2.6rem);
+          font-weight: 900;
+          color: #0f172a;
+          letter-spacing: -0.02em;
+          margin: 0 0 10px 0;
+        }
+
+        .how-work-header p {
+          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-size: 1rem;
           color: #475569;
+          margin: 0;
         }
 
-        .how-timeline-item:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
-          border-color: #c7f0e2;
+        .how-work-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 20px;
+          margin-top: 24px;
         }
 
-        .how-timeline-item:hover .how-timeline-number {
-          transform: scale(1.05);
+        .how-work-card {
+          background: #ffffff;
+          padding: 22px 20px;
+          border-radius: 16px;
+          text-align: center;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
-        .how-card,
-        .how-timeline-item {
-          transform: translateY(0);
+        .how-work-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 16px 36px rgba(25, 154, 111, 0.14);
+          border-color: #199a6f;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-          .how-card,
-          .how-timeline-item,
-          .how-card:hover,
-          .how-timeline-item:hover,
-          .how-card .how-card-icon,
-          .how-timeline-item .how-timeline-number {
-            transition: none !important;
-            transform: none !important;
-          }
+        .how-work-icon {
+          font-size: 1.6rem;
+          margin-bottom: 12px;
+          display: inline-flex;
+          width: 52px;
+          height: 52px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 14px;
+          background: #ecfdf5;
+          color: #199a6f;
+        }
+
+        .how-work-card h3 {
+          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-size: 1.05rem;
+          margin: 0 0 6px 0;
+          color: #0f172a;
+        }
+
+        .how-work-card p {
+          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          color: #475569;
+          font-size: 0.92rem;
+          margin: 0;
+          line-height: 1.5;
+        }
+        
+        .timeline-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          margin-top: 24px;
         }
       `}</style>
       {/* SOLUTION SECTION */}
-      <section style={styles.section} id="solution">
-        <div style={styles.container}>
-          <div style={styles.header}>
-            <h2 style={{ ...styles.h2, display: 'inline-block', lineHeight: 1.1 }}>
+      <section className="how-work-section" id="solution">
+        <div className="how-work-container">
+          <div className="how-work-header">
+            <h2 style={{ display: 'inline-block', lineHeight: 1.1 }}>
               <span
                 style={{
                   background: '#3498db',
@@ -241,21 +215,17 @@ export default function SolutionAndHowItWorks() {
                 end-to-end
               </span>
             </h2>
-            <p style={styles.p}>From first patient call to final payment — fully managed</p>
+            <p>From first patient call to final payment — fully managed</p>
           </div>
-          <div style={styles.grid}>
-            {services.map((item, idx) => (
+          <div className="how-work-grid">
+            {services.map((item) => (
               <div
                 key={item.title}
-                style={{
-                  ...styles.card,
-                  animationDelay: `${idx * 0.06}s`,
-                }}
-                className="how-card"
+                className="how-work-card"
               >
-                <div style={styles.icon} className="how-card-icon">{item.icon}</div>
-                <div style={styles.cardTitle} className="how-card-title">{item.title}</div>
-                <div style={styles.cardDesc} className="how-card-desc">{item.desc}</div>
+                <div className="how-work-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -263,10 +233,10 @@ export default function SolutionAndHowItWorks() {
       </section>
 
       {/* HOW IT WORKS SECTION */}
-      <section style={{ ...styles.section, background: '#fff' }} id="how">
-        <div style={styles.container}>
-          <div style={styles.header}>
-            <h2 style={{ ...styles.h2, display: 'inline-block', lineHeight: 1.1 }}>
+      <section className="how-work-section how-work-section--white" id="how">
+        <div className="how-work-container">
+          <div className="how-work-header">
+            <h2 style={{ display: 'inline-block', lineHeight: 1.1 }}>
               <span
                 style={{
                   background: '#3498db',
@@ -287,17 +257,16 @@ export default function SolutionAndHowItWorks() {
                 without the overhead
               </span>
             </h2>
-            <p style={styles.p}>Not a separate vendor. An extension of your practice.</p>
+            <p>Not a separate vendor. An extension of your practice.</p>
           </div>
-          <div style={styles.timeline}>
-            {timeline.map((item, idx) => (
-              <div key={item.title} style={styles.timelineItem} className="how-timeline-item">
-                <div style={styles.timelineNumber} className="how-timeline-number">
+          <div className="timeline-grid">
+            {timeline.map((item) => (
+              <div key={item.title} className="how-work-card">
+                <div className="how-work-icon">
                   {item.icon}
-                  <span>{item.number}</span>
                 </div>
-                <div style={styles.timelineTitle}>{item.title}</div>
-                <div style={styles.timelineDesc}>{item.desc}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>

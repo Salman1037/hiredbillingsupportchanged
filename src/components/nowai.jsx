@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
   section: {
-    padding: '6rem 2rem',
+    padding: 'clamp(40px, 6vw, 64px) 2rem',
     background: '#fff',
   },
   container: {
@@ -39,7 +39,7 @@ const styles = {
     margin: 0,
   },
   visual: {
-    background: 'linear-gradient(135deg, #199A6F 0%, #1ac98f 100%)', // fallback for var(--primary/secondary)
+    background: "#00f5a0",
     padding: '3rem',
     borderRadius: 12,
     color: '#fff',

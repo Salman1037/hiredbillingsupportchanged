@@ -105,7 +105,7 @@ const highlightStyle = (color) => ({
 });
 
 const ClientReview = () => (
-  <section style={{ padding: "4rem 0 2rem 0", background: "#fff" }}>
+  <section style={{ padding: "clamp(40px, 6vw, 64px) 0", background: "#fff" }}>
     <style>{`
       .cr-section {
         position: relative;

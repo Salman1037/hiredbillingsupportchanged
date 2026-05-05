@@ -327,7 +327,7 @@ const CSS = `
   .sc-section {
     position: relative;
     background: #F1F5F9;
-    padding: clamp(56px, 8vw, 100px) 24px;
+    padding: clamp(40px, 6vw, 64px) 24px;
     overflow: hidden;
     font-family: 'DM Sans', sans-serif;
   }

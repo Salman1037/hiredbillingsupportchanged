@@ -93,7 +93,7 @@ const CountUpStats = () => {
   }, [visible]);
 
   return (
-    <section className="bg-light pt-5" ref={sectionRef}>
+    <section style={{ padding: 'clamp(40px, 6vw, 64px) 0' }} ref={sectionRef}>
       <div className="container">
         <div className="  text-center">
           <h2 style={{ fontWeight: 'bold' }}>

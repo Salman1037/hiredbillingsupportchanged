@@ -15,13 +15,10 @@ const certifications = [
 const loopItems = [...certifications, ...certifications, ...certifications];
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=DM+Sans:wght@400;500;600&display=swap');
-
   .cert-section {
     background: #F8FAFC;
-    padding: 72px 24px 80px;
+    padding: clamp(40px, 6vw, 64px) 24px;
     overflow: hidden;
-    font-family: 'DM Sans', sans-serif;
   }
 
   .cert-inner {
@@ -40,7 +37,6 @@ const styles = `
   }
 
   .cert-heading {
-    font-family: 'Fraunces', serif;
     font-size: clamp(1.9rem, 4vw, 2.8rem);
     font-weight: 700;
     text-align: center;

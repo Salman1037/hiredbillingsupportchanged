@@ -24,7 +24,7 @@ const colors = {
 
 export default function Difference() {
   return (
-    <section style={{ padding: '4.5rem 1.25rem', background: '#fff' }}>
+    <section style={{ padding: 'clamp(40px, 6vw, 64px) 1.25rem', background: '#fff' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
           <h2 style={{ display: 'inline-block', lineHeight: 1.1 }}>

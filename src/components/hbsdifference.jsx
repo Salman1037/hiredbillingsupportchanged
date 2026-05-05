@@ -21,7 +21,7 @@ const hbs = [
 
 const styles = {
   section: {
-    padding: 'clamp(4.5rem, 7vw, 6.5rem) 2rem',
+    padding: 'clamp(40px, 6vw, 64px) 2rem',
     background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
   },
   container: {
