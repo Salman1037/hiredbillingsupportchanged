@@ -329,7 +329,7 @@ function Hero() {
             You didn't open a practice to manage chaos.
           </h1>
           <div style={subtext}>
-           We handle everything from patient calls to payments. So you can focus on care, not operations.
+           We handle everything from patient calls to payments. So you can focus on <span style={{color:'#199A6F',fontWeight:700}}> patients,</span> not <span style={{color:'#4D9BD6',fontWeight:700}}> operations.</span>
           </div>
           <div style={ctaRow}>
             <Link to="/contact" style={ctaBtn} className="hero-btn" aria-label="Contact HBS">Contact HBS →</Link>
