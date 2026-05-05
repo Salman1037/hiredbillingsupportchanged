@@ -322,7 +322,7 @@ const s = {
 };
 
 const CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 
   .sc-section {
     position: relative;
@@ -341,12 +341,12 @@ const CSS = `
   }
   .sc-blob-1 {
     width: 420px; height: 420px;
-    background: #C4B5FD;
+  
     top: -120px; left: -100px;
   }
   .sc-blob-2 {
     width: 340px; height: 340px;
-    background: #BAE6FD;
+    
     bottom: -80px; right: -60px;
   }
 
@@ -365,7 +365,7 @@ const CSS = `
     padding: 6px 18px;
     border-radius: 50px;
     border: 1.5px solid #DDD6FE;
-    background: #EDE9FE;
+  
     color: #199A6F;
     font-size: 11px;
     font-weight: 700;
