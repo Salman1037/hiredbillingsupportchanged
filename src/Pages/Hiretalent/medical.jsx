@@ -2,16 +2,20 @@
 import Contact from '../../components/Contact';
 import { Helmet } from 'react-helmet-async';
 import Ourcertification from '../../components/Ourcertification';
-import IconsService from '../../components/Hire/iconsservice';
+// import IconsService from '../../components/Hire/iconsservice';
 import Readygoal from './Readygoal';
 import Medicalcore from '../../components/Hire/Medicalcore';
-import SuccessNumber from '../../components/Hire/successnumber';
-import Medicalspecialties from '../../components/Hire/Medicalspecialties';
+// import SuccessNumber from '../../components/Hire/successnumber';
+// import Medicalspecialties from '../../components/Hire/Medicalspecialties';
 import MedicalVA from '../../components/Hire/medicalva';
 import Faq from '../../components/Hire/Faq';
 import HBSAgencies from '../../components/Hire/HBSAgencies';
 import Emr from '../../components/Hire/Emr';
 import MedicalHero from '../../components/Hire/Dental/MedicalHero';
+import CountUpStats from '../../components/CountUpStats';
+import HowItWorks from '../../components/Hire/Dental/Howitwork';
+import Difference from '../../components/difference';
+import ClientReview from '../../components/client_review';
 
 function Medical() {
   return (
@@ -22,17 +26,23 @@ function Medical() {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Helmet>
       <MedicalHero />
-      <IconsService />
+        <Ourcertification/>
+      <CountUpStats/>
+          
+          
       <Readygoal />
-      <Medicalspecialties />
-      <SuccessNumber />
+         <Medicalcore />
+      
       <MedicalVA />
-      <Medicalcore />
-      <Ourcertification />
+    
+       <HowItWorks/>
+       <HBSAgencies/>
+        <Difference/>
+        <ClientReview/>
       <Faq/>
-      <HBSAgencies/>
-      <Emr/>
-      <Contact />
+     
+      {/* <Emr/>
+      <Contact /> */}
     </>
   );
 }
