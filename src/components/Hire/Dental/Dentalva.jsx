@@ -4,25 +4,25 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FaStethoscope } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
 
-const MedicalVA = () => {
-  const medicalRoles = [
+const DentalVA = () => {
+  const dentalRoles = [
     {
-      title: 'Medical Scheduling Coordinator',
+      title: 'Dental Scheduling Coordinator',
       description:
         'Manages appointment scheduling, incoming calls, and patient inquiries.',
     },
     {
-      title: 'Medical Insurance Coordinator',
+      title: 'Dental Insurance Coordinator',
       description:
         'Verifies patient insurance coverage, handles pre-authorizations, and manages claims.',
     },
     {
-      title: 'Medical Billing Coordinator',
+      title: 'Dental Billing Coordinator',
       description:
         'Processes billing, tracks payments, manages collections, and reconciles patient accounts.',
     },
     {
-      title: 'Medical Scribe',
+      title: 'Dental Scribe',
       description:
         'Documents patient encounters in real-time during telehealth or in-person visits.',
     },
@@ -35,7 +35,7 @@ const MedicalVA = () => {
 
   return (
     <section
-      className="py-5 position-relative"   id="medical-roles-section"
+      className="py-5 position-relative"   id="dental-roles-section"
       style={{
         background: '#ffffff',
         overflow: 'hidden',
@@ -88,7 +88,7 @@ const MedicalVA = () => {
             {/* Button */}
             <div className="mt-4">
               <a
-                href="#medical-roles"
+                href="#dental-roles"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -124,7 +124,7 @@ const MedicalVA = () => {
 
         {/* Cards */}
         <Row className="g-4 mt-5">
-          {medicalRoles.map((role, index) => (
+          {dentalRoles.map((role, index) => (
             <Col lg={4} md={6} key={index}>
               <div
                 style={{
@@ -219,4 +219,4 @@ const MedicalVA = () => {
   );
 };
 
-export default MedicalVA;
+export default DentalVA;

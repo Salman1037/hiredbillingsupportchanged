@@ -8,10 +8,13 @@ import MedicalspecialtiesDental from '../../components/Hire/Dental/Medicalspecia
 import Medicalcore from '../../components/Hire/Medicalcore';
 import SuccessNumber from '../../components/Hire/successnumber';
 import Ourcertification from '../../components/Ourcertification';
-import MedicalVA from '../../components/Hire/medicalva';
+import DentalVA from '../../components/Hire/Dental/Dentalva';
 import Faqdental from '../../components/Hire/Dental/Faqdental';
 import HBSAgencies from '../../components/Hire/HBSAgencies';
 import Emr from '../../components/Hire/Emr';
+import CountUpStats from '../../components/CountUpStats';
+import Difference from '../../components/difference';
+import ClientReview from '../../components/client_review';
 
 
 
@@ -19,17 +22,21 @@ function Dental() {
   return (
     <>
       <DentalHero />
-            <IconsService />
+             <Ourcertification/>
+      <CountUpStats/>
             <Dentalteam />
-            <MedicalspecialtiesDental />
+            {/* <MedicalspecialtiesDental /> */}
               <Medicalcore />
-                <SuccessNumber />
-                <Ourcertification />
-                <MedicalVA />
+           
+               
+                <DentalVA />
+                 <HBSAgencies/>
+                  <Difference/>
+        <ClientReview/>
                 <Faqdental/>
-                <HBSAgencies/>
+               
                 
-      <Emr/>
+     
     </>
   );
 }
