@@ -9,86 +9,195 @@ import epic from '../../assets/images/services/epic-logo.jpg';
 import nextgen from '../../assets/images/services/nextgen-logo.jpg';
 
 const EHRSection = () => {
+  const ehrLogos = [
+    { src: advancedMD, alt: "AdvancedMD" },
+    { src: athenaHealth, alt: "Athena Health" },
+    { src: careCloud, alt: "CareCloud" },
+    { src: eClinicalWorks, alt: "eClinicalWorks" },
+    { src: epic, alt: "Epic" },
+    { src: nextgen, alt: "NextGen" }
+  ];
+
   return (
-    <section className="py-5" style={{ backgroundColor: "#f7f8fa" }}>
-      <div className="container text-center">
-        {/* Heading */}
-        <h2 className="fw-semibold text-dark mb-2" style={{ fontWeight: '700' }}>
-          <span
-            style={{
-              background: ' #3498db',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            We excel in utilizing these&nbsp;
-          </span>
+    <>
+      <style>
+        {`
+          *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
 
-          <span
-            style={{
-              background: ' #1abc9c',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            EHRs
-          </span>
-        </h2>
-        <div
-          className="mx-auto mb-3"
-          style={{ width: "60px", height: "3px", backgroundColor: "#00b6f0" }}
-        ></div>
-        <p className="text-muted mb-5">
-          The specialists at HBS are highly knowledgeable about the features and workflows
-          of your EHR system.
-        </p>
+          .ehrSection{
+            width:100%;
+            background:#f8f9fa;
+            padding:clamp(80px, 8vw, 100px) 0;
+            marginTop:120px;
+            font-family:'Inter', sans-serif;
+          }
 
-        {/* Logos Grid */}
-        <div className="row justify-content-center g-4 mb-4">
-          <div className="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
-            <div className="bg-white p-3 shadow-sm rounded w-100 d-flex align-items-center justify-content-center" style={{ height: "100px" }}>
-              <img src={advancedMD} alt="AdvancedMD" className="img-fluid" style={{ maxHeight: "60px" }} />
-            </div>
+          .ehrContainer{
+            max-width:1280px;
+            margin:auto;
+            padding:0 24px;
+            text-align:center;
+          }
+
+          .ehrTitle{
+            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            line-height:1.02;
+            font-weight:900;
+            color:#4D9BD6;
+            letter-spacing:-0.08em;
+            max-width:900px;
+            margin:auto;
+            margin-bottom:22px;
+          }
+
+          .ehrTitle span:first-child{
+            background:linear-gradient(135deg, #4D9BD6, #199A6F);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+          }
+
+          .ehrTitle span:last-child{
+            color:#52525B;
+          }
+
+          .ehrDivider{
+            width:60px;
+            height:3px;
+            background:#4D9BD6;
+            margin:auto;
+            margin-bottom:24px;
+          }
+
+          .ehrDescription{
+            font-size:18px;
+            color:#52525B;
+            line-height:1.6;
+            margin-bottom:64px;
+            max-width:600px;
+            margin-left:auto;
+            margin-right:auto;
+          }
+
+          .ehrGrid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+            gap:32px;
+            margin-bottom:48px;
+          }
+
+          .ehrLogo{
+            background:#ffffff;
+            padding:24px;
+            border-radius:12px;
+            box-shadow:0px 4px 16px rgba(0,0,0,0.04);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100px;
+            transition:0.22s;
+          }
+
+          .ehrLogo:hover{
+            transform:translateY(-2px);
+            box-shadow:0px 8px 24px rgba(0,0,0,0.08);
+          }
+
+          .ehrLogo img{
+            max-height:60px;
+            max-width:100%;
+            object-fit:contain;
+          }
+
+          .ehrButton{
+            background:linear-gradient(135deg, #4D9BD6, #199A6F);
+            color:#ffffff;
+            border:none;
+            padding:16px 32px;
+            border-radius:50px;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.22s;
+            box-shadow:0px 4px 16px rgba(77,155,214,0.3);
+          }
+
+          .ehrButton:hover{
+            transform:translateY(-2px);
+            box-shadow:0px 8px 24px rgba(77,155,214,0.4);
+          }
+
+          @media(max-width:991px){
+            .ehrGrid{
+              grid-template-columns:repeat(3, 1fr);
+              gap:24px;
+            }
+
+            .ehrTitle{
+              font-size:42px;
+            }
+          }
+
+          @media(max-width:600px){
+            .ehrSection{
+              padding:80px 15px;
+            }
+
+            .ehrTitle{
+              font-size:34px;
+            }
+
+            .ehrGrid{
+              grid-template-columns:repeat(2, 1fr);
+              gap:16px;
+            }
+
+            .ehrLogo{
+              padding:16px;
+              height:80px;
+            }
+
+            .ehrLogo img{
+              max-height:40px;
+            }
+
+            .ehrDescription{
+              font-size:16px;
+              margin-bottom:40px;
+            }
+          }
+        `}
+      </style>
+
+      <section className="ehrSection">
+        <div className="ehrContainer">
+          <h2 className="ehrTitle">
+            <span>We excel in utilizing these</span> <span>EHRs</span>
+          </h2>
+          <div className="ehrDivider"></div>
+          <p className="ehrDescription">
+            The specialists at HBS are highly knowledgeable about the features and workflows
+            of your EHR system.
+          </p>
+
+          <div className="ehrGrid">
+            {ehrLogos.map((logo, index) => (
+              <div key={index} className="ehrLogo">
+                <img src={logo.src} alt={logo.alt} />
+              </div>
+            ))}
           </div>
-          <div className="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
-            <div className="bg-white p-3 shadow-sm rounded w-100 d-flex align-items-center justify-content-center" style={{ height: "100px" }}>
-              <img src={athenaHealth} alt="Athena Health" className="img-fluid" style={{ maxHeight: "60px" }} />
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
-            <div className="bg-white p-3 shadow-sm rounded w-100 d-flex align-items-center justify-content-center" style={{ height: "100px" }}>
-              <img src={careCloud} alt="CareCloud" className="img-fluid" style={{ maxHeight: "60px" }} />
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
-            <div className="bg-white p-3 shadow-sm rounded w-100 d-flex align-items-center justify-content-center" style={{ height: "100px" }}>
-              <img src={eClinicalWorks} alt="eClinicalWorks" className="img-fluid" style={{ maxHeight: "60px" }} />
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
-            <div className="bg-white p-3 shadow-sm rounded w-100 d-flex align-items-center justify-content-center" style={{ height: "100px" }}>
-              <img src={epic} alt="Epic" className="img-fluid" style={{ maxHeight: "60px" }} />
-            </div>
-          </div>
-          <div className="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
-            <div className="bg-white p-3 shadow-sm rounded w-100 d-flex align-items-center justify-content-center" style={{ height: "100px" }}>
-              <img src={nextgen} alt="NextGen" className="img-fluid" style={{ maxHeight: "60px" }} />
-            </div>
-          </div>
+
+          <button className="ehrButton">
+            EXPLORE MORE
+          </button>
         </div>
-
-        {/* Button */}
-        <button
-          className="btn text-white px-4 py-3 fw-semibold rounded-pill"
-          style={{
-            background: "linear-gradient(to bottom, #00c0ff, #0080ff)",
-            boxShadow: "0 3px 10px rgba(0,0,0,0.2)",
-          }}
-        >
-          EXPLORE MORE
-        </button>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

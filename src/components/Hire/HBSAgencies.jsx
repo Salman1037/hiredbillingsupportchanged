@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { BsCheckLg, BsXLg } from 'react-icons/bs';
+import { FaCheck, FaTimes } from 'react-icons/fa';
 
 const HBSAgencies = () => {
   const hbsFeatures = [
@@ -22,151 +21,235 @@ const HBSAgencies = () => {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: '#fff' }}>
-      <Container>
-        <Row className="justify-content-center mb-4">
-          <Col lg={10} className="text-center">
-            <h2 style={{
-              color: '#002856',
-              fontSize: '2.5rem',
-              fontWeight: '700',
-              marginBottom: '1rem'
-            }}>
-              <span
-                style={{
-                  background: ' #3498db',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                HBS vs. VA&nbsp;
-              </span>
+    <>
+      <style>
+        {`
+          *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
 
-              <span
-                style={{
-                  background: ' #1abc9c',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                Agencies
-              </span>
+          .agenciesSection{
+            width:100%;
+            background:#ffffff;
+            padding:clamp(80px, 8vw, 100px) 0;
+            marginTop:120px;
+            font-family:'Inter', sans-serif;
+          }
+
+          .agenciesContainer{
+            max-width:1280px;
+            margin:auto;
+            padding:0 24px;
+          }
+
+          .agenciesHeader{
+            text-align:center;
+            margin-bottom:64px;
+          }
+
+          .agenciesTitle{
+            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            line-height:1.02;
+            font-weight:900;
+            color:#4D9BD6;
+            letter-spacing:-0.08em;
+            max-width:900px;
+            margin:auto;
+            margin-bottom:22px;
+          }
+
+          .agenciesTitle span:first-child{
+            background:linear-gradient(135deg, #4D9BD6, #199A6F);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+          }
+
+          .agenciesTitle span:last-child{
+            color:#52525B;
+          }
+
+          .agenciesDescription{
+            max-width:560px;
+            margin:22px auto 0;
+            text-align:center;
+            font-size:clamp(1.05rem, 2vw, 1.35rem);
+            line-height:1.6;
+            color:#52525B;
+          }
+
+          .comparisonGrid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:48px;
+            max-width:1000px;
+            margin:0 auto;
+          }
+
+          .comparisonCard{
+            background:#ffffff;
+            border-radius:20px;
+            padding:48px 32px;
+            box-shadow:0px 10px 35px rgba(0,0,0,0.08);
+            border:2px solid transparent;
+            transition:0.22s;
+          }
+
+          .comparisonCard.hbs{
+            border-color:#199A6F;
+          }
+
+          .comparisonCard.other{
+            border-color:#e5e5e5;
+          }
+
+          .comparisonCard:hover{
+            transform:translateY(-4px);
+          }
+
+          .cardHeader{
+            background:linear-gradient(135deg, #4D9BD6, #199A6F);
+            color:#ffffff;
+            padding:20px 24px;
+            border-radius:12px;
+            text-align:center;
+            margin-bottom:32px;
+            font-size:20px;
+            font-weight:700;
+          }
+
+          .comparisonCard.other .cardHeader{
+            background:#f5f5f5;
+            color:#52525B;
+          }
+
+          .featureList{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+          }
+
+          .featureItem{
+            display:flex;
+            align-items:flex-start;
+            gap:16px;
+          }
+
+          .featureIcon{
+            width:24px;
+            height:24px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            margin-top:2px;
+          }
+
+          .featureIcon.check{
+            background:#199A6F;
+            color:#ffffff;
+          }
+
+          .featureIcon.cross{
+            background:#dc3545;
+            color:#ffffff;
+          }
+
+          .featureText{
+            font-size:16px;
+            line-height:24px;
+            color:#52525B;
+            margin:0;
+            font-weight:500;
+          }
+
+          @media(max-width:991px){
+            .comparisonGrid{
+              grid-template-columns:1fr;
+              gap:32px;
+            }
+
+            .agenciesTitle{
+              font-size:42px;
+            }
+          }
+
+          @media(max-width:600px){
+            .agenciesSection{
+              padding:80px 15px;
+            }
+
+            .agenciesTitle{
+              font-size:34px;
+            }
+
+            .agenciesDescription{
+              font-size:15px;
+              line-height:28px;
+            }
+
+            .comparisonCard{
+              padding:32px 24px;
+            }
+
+            .cardHeader{
+              padding:16px 20px;
+              font-size:18px;
+            }
+          }
+        `}
+      </style>
+
+      <section className="agenciesSection">
+        <div className="agenciesContainer">
+          <div className="agenciesHeader">
+            <h2 className="agenciesTitle">
+              <span>HBS vs. VA</span> <span>Agencies</span>
             </h2>
-            <p style={{
-              color: '#666',
-              fontSize: '1.1rem',
-              marginBottom: '3rem'
-            }}>
+            <p className="agenciesDescription">
               Discover what our vetted virtual medical receptionists do for hundreds of healthcare practices.
             </p>
-          </Col>
-        </Row>
+          </div>
 
-        <Row className="justify-content-center">
-          <Col lg={5}>
-            <div style={{
-              backgroundColor: '#fff',
-              borderRadius: '15px',
-              padding: '2rem',
-              height: '100%',
-              boxShadow: '0 0 20px rgba(0,0,0,0.1)',
-              border: '2px solid #00E676'
-            }}>
-              <h3 style={{
-                color: '#fff',
-                backgroundColor: '#00A6E6',
-                padding: '1rem 2rem',
-                borderRadius: '10px',
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                marginBottom: '2rem',
-                textAlign: 'center'
-              }}>
+          <div className="comparisonGrid">
+            <div className="comparisonCard hbs">
+              <div className="cardHeader">
                 Hiring with HBS
-              </h3>
-              <div>
+              </div>
+              <div className="featureList">
                 {hbsFeatures.map((feature, index) => (
-                  <div key={index} className="d-flex align-items-start mb-4">
-                    <span style={{
-                      backgroundColor: '#00E676',
-                      borderRadius: '50%',
-                      width: '24px',
-                      height: '24px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginRight: '1rem',
-                      marginTop: '3px'
-                    }}>
-                      <BsCheckLg color="#fff" size={14} />
-                    </span>
-                    <p style={{
-                      color: '#002856',
-                      fontSize: '1rem',
-                      margin: 0,
-                      flex: 1
-                    }}>
-                      {feature}
-                    </p>
+                  <div key={index} className="featureItem">
+                    <div className="featureIcon check">
+                      <FaCheck size={12} />
+                    </div>
+                    <p className="featureText">{feature}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </Col>
 
-          <Col lg={5}>
-            <div style={{
-              backgroundColor: '#fff',
-              borderRadius: '15px',
-              padding: '2rem',
-              height: '100%',
-              border: '2px solid #eee',
-              boxShadow: '0 0 20px rgba(0,0,0,0.1)'
-            }}>
-              <h3 style={{
-                color: '#fff',
-                backgroundColor: '#00A6E6',
-                padding: '1rem 2rem',
-                borderRadius: '10px',
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                marginBottom: '2rem',
-                textAlign: 'center'
-              }}>
+            <div className="comparisonCard other">
+              <div className="cardHeader">
                 Other VA Agencies
-              </h3>
-              <div>
+              </div>
+              <div className="featureList">
                 {otherAgenciesFeatures.map((feature, index) => (
-                  <div key={index} className="d-flex align-items-start mb-4">
-                    <span style={{
-                      backgroundColor: '#dc3545',
-                      borderRadius: '50%',
-                      width: '24px',
-                      height: '24px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginRight: '1rem',
-                      marginTop: '3px'
-                    }}>
-                      <BsXLg color="#fff" size={14} />
-                    </span>
-                    <p style={{
-                      color: '#002856',
-                      fontSize: '1rem',
-                      margin: 0,
-                      flex: 1
-                    }}>
-                      {feature}
-                    </p>
+                  <div key={index} className="featureItem">
+                    <div className="featureIcon cross">
+                      <FaTimes size={12} />
+                    </div>
+                    <p className="featureText">{feature}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Accordion } from 'react-bootstrap';
-import { BsPlusLg } from 'react-icons/bs';
 
 const Faq = () => {
   const [activeKey, setActiveKey] = useState(null);
@@ -29,101 +27,188 @@ const Faq = () => {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: '#fff' }}>
-      <Container>
-        <Row className="justify-content-center mb-5">
-          <Col lg={8} className="text-center">
-            <h2 style={{ 
-              color: '#00A6E6',
-              fontSize: '2.5rem',
-              fontWeight: '700',
-              marginBottom: '1rem'
-            }}>
-              Frequently Asked Questions
-            </h2>
-            <p className="text-muted" style={{ fontSize: '1.1rem' }}>
-              Get to know the answers of frequently asked questions about our laboratory billing services.
-            </p>
-          </Col>
-        </Row>
-
-        <Row className="justify-content-center">
-          <Col lg={8}>
-            <Accordion activeKey={activeKey} className="faq-accordion">
-              {faqData.map((faq, index) => (
-                <Accordion.Item 
-                  key={index} 
-                  eventKey={index.toString()}
-                  className="border-0 mb-3"
-                >
-                  <Accordion.Header
-                    onClick={() => setActiveKey(activeKey === index.toString() ? null : index.toString())}
-                    style={{ 
-                      border: 'none',
-                      background: 'transparent'
-                    }}
-                  >
-                    <div className="d-flex align-items-center justify-content-between w-100">
-                      <span style={{ 
-                        color: '#002856',
-                        fontSize: '1.1rem',
-                        fontWeight: '600'
-                      }}>
-                        {faq.question}
-                      </span>
-                      <span style={{
-                        backgroundColor: '#00E676',
-                        width: '24px',
-                        height: '24px',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: 'white',
-                        transform: activeKey === index.toString() ? 'rotate(45deg)' : 'rotate(0)',
-                        transition: 'transform 0.3s ease'
-                      }}>
-                        <BsPlusLg size={12} />
-                      </span>
-                    </div>
-                  </Accordion.Header>
-                  <Accordion.Body style={{
-                    paddingLeft: '0',
-                    paddingRight: '0',
-                    color: '#666',
-                    fontSize: '1rem',
-                    lineHeight: '1.6'
-                  }}>
-                    {faq.answer}
-                  </Accordion.Body>
-                </Accordion.Item>
-              ))}
-            </Accordion>
-          </Col>
-        </Row>
-      </Container>
-
+    <>
       <style>
         {`
-          .faq-accordion .accordion-button {
-            padding: 1.5rem 0;
-            background: transparent;
-            box-shadow: none !important;
-            border-bottom: 1px solid #eee;
+          *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
           }
-          .faq-accordion .accordion-button:not(.collapsed) {
-            background: transparent;
-            color: #002856;
+
+          .faqSection{
+            width:100%;
+            background:#f5f5f5;
+            padding:clamp(80px, 8vw, 100px) 0;
+            marginTop:120px;
+            font-family:'Inter', sans-serif;
           }
-          .faq-accordion .accordion-button::after {
-            display: none;
+
+          .faqContainer{
+            max-width:1280px;
+            margin:auto;
+            padding:0 24px;
           }
-          .faq-accordion .accordion-body {
-            padding: 1rem 0;
+
+          .faqHeader{
+            text-align:center;
+            margin-bottom:48px;
+          }
+
+          .faqTitle{
+            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            line-height:1.02;
+            font-weight:900;
+            color:#4D9BD6;
+            letter-spacing:-0.08em;
+            max-width:900px;
+            margin:auto;
+            margin-bottom:22px;
+          }
+
+          .faqDescription{
+            max-width:560px;
+            margin:22px auto 0;
+            text-align:center;
+            font-size:clamp(1.05rem, 2vw, 1.35rem);
+            line-height:1.6;
+            color:#52525B;
+          }
+
+          .faqAccordion{
+            max-width:800px;
+            margin:0 auto;
+          }
+
+          .faqItem{
+            border:1px solid #e5e5e5;
+            border-radius:12px;
+            margin-bottom:16px;
+            overflow:hidden;
+          }
+
+          .faqHeaderBtn{
+            width:100%;
+            background:none;
+            border:none;
+            padding:24px 32px;
+            text-align:left;
+            cursor:pointer;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            font-family:'Inter', sans-serif;
+            transition:0.22s;
+          }
+
+          .faqHeaderBtn:hover{
+            background:#f8f8f8;
+          }
+
+          .faqQuestion{
+            font-size:18px;
+            font-weight:600;
+            color:#4D9BD6;
+            line-height:1.4;
+          }
+
+          .faqIcon{
+            width:24px;
+            height:24px;
+            border-radius:50%;
+            background:#199A6F;
+            color:#ffffff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:12px;
+            font-weight:700;
+            transition:0.22s;
+          }
+
+          .faqItem.active .faqIcon{
+            background:#4D9BD6;
+            transform:rotate(45deg);
+          }
+
+          .faqBody{
+            padding:0 32px 24px;
+            display:none;
+          }
+
+          .faqItem.active .faqBody{
+            display:block;
+          }
+
+          .faqAnswer{
+            font-size:16px;
+            line-height:30px;
+            color:#52525B;
+            margin:0;
+          }
+
+          @media(max-width:991px){
+            .faqTitle{
+              font-size:42px;
+            }
+          }
+
+          @media(max-width:600px){
+            .faqSection{
+              padding:80px 15px;
+            }
+
+            .faqTitle{
+              font-size:34px;
+            }
+
+            .faqDescription{
+              font-size:15px;
+              line-height:28px;
+            }
+
+            .faqHeaderBtn{
+              padding:20px 24px;
+            }
+
+            .faqBody{
+              padding:0 24px 20px;
+            }
           }
         `}
       </style>
-    </section>
+
+      <section className="faqSection">
+        <div className="faqContainer">
+          <div className="faqHeader">
+            <h2 className="faqTitle">Frequently Asked Questions</h2>
+            <p className="faqDescription">
+              Get answers to common questions about our medical virtual assistant services and how we can help your practice.
+            </p>
+          </div>
+
+          <div className="faqAccordion">
+            {faqData.map((faq, index) => (
+              <div 
+                key={index} 
+                className={`faqItem ${activeKey === index ? 'active' : ''}`}
+              >
+                <button
+                  className="faqHeaderBtn"
+                  onClick={() => setActiveKey(activeKey === index ? null : index)}
+                >
+                  <span className="faqQuestion">{faq.question}</span>
+                  <span className="faqIcon">+</span>
+                </button>
+                <div className="faqBody">
+                  <p className="faqAnswer">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -19,16 +19,15 @@ const HireStaffHero = () => {
     <section
       style={{
         background: "#FFFFFF",
-        padding: "clamp(40px, 6vw, 64px) 0",
+        padding: "clamp(80px, 8vw, 100px) 0",
         textAlign: "center",
         fontFamily: "'Inter', sans-serif",
-        minHeight: "700px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        minHeight: "auto",
+        scrollMarginTop: "120px",
+        marginTop: "120px",
       }}
     >
-      <div style={{ maxWidth: 1280, width: "100%", padding: "0 24px", margin: "0 auto" }}>
+      <div style={{ maxWidth: 1280, width: "100%", padding: "0 24px", margin: "0 auto", display: "block" }}>
       {/* Heading */}
       <h1
         style={{
@@ -146,13 +145,13 @@ const HireStaffHero = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = "#4D9BD6";
-            e.currentTarget.style.boxShadow = "0 8px 32px 0 rgba(139,92,246,0.22)";
-            e.currentTarget.style.transform = "translateY(-2px) scale(1.055)";
+            e.currentTarget.style.boxShadow = "0 16px 36px rgba(25, 154, 111, 0.14)";
+            e.currentTarget.style.transform = "translateY(-6px)";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = "#199A6F";
             e.currentTarget.style.boxShadow = "0 4px 24px 0 rgba(139,92,246,0.10)";
-            e.currentTarget.style.transform = "translateY(0) scale(1)";
+            e.currentTarget.style.transform = "translateY(0)";
           }}
         >
           Book a Demo →
@@ -188,13 +187,15 @@ const HireStaffHero = () => {
             e.currentTarget.style.borderColor = "#4D9BD6";
             e.currentTarget.style.color = "#4D9BD6";
             e.currentTarget.style.background = "#F4F4F5";
-            e.currentTarget.style.transform = "translateY(-2px) scale(1.055)";
+            e.currentTarget.style.boxShadow = "0 16px 36px rgba(25, 154, 111, 0.14)";
+            e.currentTarget.style.transform = "translateY(-6px)";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.borderColor = "#E5E7EB";
             e.currentTarget.style.color = "#18181B";
             e.currentTarget.style.background = "#fff";
-            e.currentTarget.style.transform = "translateY(0) scale(1)";
+            e.currentTarget.style.boxShadow = "0 2px 12px 0 rgba(0,0,0,0.04)";
+            e.currentTarget.style.transform = "translateY(0)";
           }}
         >
           Browse Roles ↓

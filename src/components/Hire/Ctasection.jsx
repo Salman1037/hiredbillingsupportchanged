@@ -2,17 +2,14 @@ const Ctasection = () => {
   return (
     <section
       style={{
-        backgroundColor: "#F8FAFC",
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: "#E0F7EF",
+        padding: "clamp(80px, 8vw, 60px) 20px",
+        // marginTop: "120px",
         fontFamily: "'Inter', sans-serif",
-        // padding: "20px 20px",
         textAlign: "center",
       }}
     >
-      <div >
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Badge */}
         <div

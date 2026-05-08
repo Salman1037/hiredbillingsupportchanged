@@ -38,8 +38,9 @@ const TestimonialsSection = () => {
 
           .testimonialsSection{
             width:100%;
-            padding:clamp(40px, 6vw, 64px) 0 clamp(40px, 6vw, 64px) 0;
+            padding:clamp(80px, 8vw, 100px) 0;
             background:#f5f5f5;
+            marginTop:120px;
           }
 
           .testimonialsContainer{
@@ -270,9 +271,34 @@ const TestimonialsSection = () => {
             <span>TESTIMONIALS</span>
           </div>
 
-          <h2 className="mainHeading">
-            Trusted Across Medical, Dental & Insurance
-          </h2>
+         
+           <h2 className="mb-3" style={{ 
+              color: '#002856', 
+              fontSize: '2.5rem', 
+              fontWeight: '700',
+              textAlign: 'center',
+              fontFamily: "'Plus Jakarta Sans', sans-serif"
+            }}>
+              <span
+                style={{
+                  background: ' #3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                 Trusted Across Medical, &nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: ' #1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+             Dental & Insurance
+              </span>
+            </h2>
 
           {/* Top Cards */}
           <div className="topCards">

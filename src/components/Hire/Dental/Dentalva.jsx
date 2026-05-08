@@ -37,6 +37,7 @@ const Teamhandle = () => {
 
   return (
     <section
+      id='dental-roles-section'
       style={{
         width: '100%',
         background: '#ffffff',
@@ -72,6 +73,13 @@ const Teamhandle = () => {
                fully managed
               </span>
             </h2>
+            <button 
+  onClick={() => window.location.href = '/hire'}
+  style={{backgroundColor:'#199A6F', color:'#FFFFFF', border:'none', padding:'12px 24px', borderRadius:'8px', fontSize:'16px', fontWeight:'700', cursor:'pointer'}}
+>
+  Learn More
+</button>
+
           <p
             style={{
               margin: '10px auto 0',
@@ -105,16 +113,18 @@ const Teamhandle = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
-                transition: 'transform 0.22s ease, box-shadow 0.22s ease',
+                transition: 'transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease',
                 border: '1px solid #E2E8F0',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-6px)';
-                e.currentTarget.style.boxShadow = '0 24px 80px rgba(15, 76, 129, 0.12)';
+                e.currentTarget.style.boxShadow = '0 16px 36px rgba(25, 154, 111, 0.14)';
+                e.currentTarget.style.borderColor = '#199a6f';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(15, 76, 129, 0.08)';
+                e.currentTarget.style.boxShadow = '0 6px 24px rgba(15, 23, 42, 0.06)';
+                e.currentTarget.style.borderColor = '#E2E8F0';
               }}
             >
               <div

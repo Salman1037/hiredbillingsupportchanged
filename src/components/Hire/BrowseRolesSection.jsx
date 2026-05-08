@@ -91,8 +91,10 @@ const BrowseRoles = () => {
 
           .browseRoles{
             width:100%;
-            padding:clamp(40px, 6vw, 64px) 0;
+            padding:clamp(80px, 8vw, 100px) 0;
             background:#f5f5f5;
+            marginTop:120px;
+            fontFamily: "'Inter', sans-serif;
           }
 
           .browseContainer{
@@ -124,7 +126,9 @@ const BrowseRoles = () => {
             line-height:1.02;
             font-weight:900;
             color:#4D9BD6;
-            letterSpacing:-0.08em;
+            letter-spacing:-0.08em;
+            max-width:900px;
+            margin:auto;
           }
 
           .mainText{
@@ -193,7 +197,7 @@ const BrowseRoles = () => {
           }
 
           .cardsWrapper{
-            margin-top:40px;
+            margin-top:48px;
             display:flex;
             flex-direction:column;
             gap:20px;
@@ -225,6 +229,7 @@ const BrowseRoles = () => {
             font-size:22px;
             line-height:30px;
             font-weight:700;
+            margin-bottom:14px;
           }
 
           .roleDescription{
@@ -263,7 +268,7 @@ const BrowseRoles = () => {
           @media(max-width:991px){
 
             .mainHeading{
-              font-size:42px;
+              font-size:clamp(2.4rem, 4vw, 3.2rem);
             }
 
             .roleCard{
@@ -285,16 +290,16 @@ const BrowseRoles = () => {
           @media(max-width:600px){
 
             .browseRoles{
-              padding:70px 15px;
+              padding:clamp(60px, 6vw, 80px) 15px;
             }
 
             .mainHeading{
-              font-size:34px;
+              font-size:clamp(2.2rem, 5vw, 2.8rem);
             }
 
             .mainText{
-              font-size:15px;
-              line-height:28px;
+              font-size:clamp(1rem, 2.2vw, 1.15rem);
+              line-height:1.6;
             }
 
             .tabBtn{
@@ -313,16 +318,41 @@ const BrowseRoles = () => {
         `}
       </style>
 
-      <section className="browseRoles">
+      <section className="browseRoles" id="dental-roles-section">
         <div className="browseContainer">
 
           <div className="topBadge">
             <span>BROWSE ROLES BY INDUSTRY</span>
           </div>
 
-          <h2 className="mainHeading">
-            Find the Right Role for Your Needs
-          </h2>
+         
+           <h2 className="mb-3" style={{ 
+              color: '#002856', 
+              fontSize: '2.5rem', 
+              fontWeight: '700',
+            textAlign: 'center',
+              fontFamily: "'Plus Jakarta Sans', sans-serif"
+            }}>
+              <span
+                style={{
+                  background: ' #3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                 Find the Right Role  &nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: ' #1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                for Your Needs
+              </span>
+            </h2>
 
           <p className="mainText">
             Edge provides fully managed, HIPAA-certified remote admin staff

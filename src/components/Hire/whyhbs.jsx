@@ -61,7 +61,8 @@ const WhyhbsSection = () => {
           .whyEdgeSection{
             width:100%;
             background:#f5f5f5;
-            padding:clamp(40px, 6vw, 64px) 0 clamp(40px, 6vw, 64px) 0;
+            padding:clamp(80px, 8vw, 100px) 0;
+            marginTop:120px;
           }
 
           .whyEdgeContainer{
@@ -118,6 +119,18 @@ const WhyhbsSection = () => {
             display:flex;
             align-items:flex-start;
             gap:18px;
+            padding:28px 24px;
+            border:2px solid #E5E7EB;
+            border-radius:16px;
+            background:#ffffff;
+            transition:0.22s;
+            box-shadow:0px 2px 8px rgba(0,0,0,0.04);
+          }
+
+          .featureCard:hover{
+            border-color:#199A6F;
+            box-shadow:0px 8px 24px rgba(25,154,111,0.12);
+            transform:translateY(-4px);
           }
 
           .iconBox{
@@ -210,6 +223,7 @@ const WhyhbsSection = () => {
 
             .featureCard{
               gap:15px;
+              padding:24px 20px;
             }
 
             .iconBox{
@@ -229,9 +243,35 @@ const WhyhbsSection = () => {
             <span>WHY EDGE</span>
           </div>
 
-          <h2 className="mainHeading">
-            Not a Staffing Agency. An Operational Partner
-          </h2>
+          
+           <h2 className="mb-3" style={{ 
+              color: '#002856', 
+              fontSize: '2.5rem', 
+              fontWeight: '700',
+              textAlign: 'center',
+              fontFamily: "'Plus Jakarta Sans', sans-serif"
+            }}>
+              <span
+                style={{
+                  background: ' #3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                 Not a Staffing Agency. &nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: ' #1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+               An Operational Partner
+              </span>
+            </h2>
+
 
           <p className="mainDescription">
             Most staffing agencies send you a resume and walk away. Edge finds,

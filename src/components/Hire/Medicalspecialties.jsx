@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -79,115 +78,194 @@ const Medicalspecialties = () => {
   };
 
   return (
-    <section style={{ 
-    //   backgroundColor: '#00A6E6',
-      padding: '80px 0',
-      position: 'relative',
-      overflow: 'hidden',
-    //   backgroundImage: 'linear-gradient(to right, #00A6E6, #0091EA)'
-    }}>
-      <Container>
-        <Row className="justify-content-center mb-5"style={{ 
-    //   backgroundColor: '#00A6E6',
-    //   padding: '80px 0',
-    //   position: 'relative',
-    //   overflow: 'hidden',
-      backgroundImage: 'linear-gradient(to right, #00A6E6, #0091EA)'
-    }}>
-          <Col lg={8} className="text-center">
-            <h2 className="text-white mb-4" style={{ 
-              fontSize: '2.5rem',
-              fontWeight: '700'
-            }}>
-              Medical Specialties We Support
-            </h2>
-            <div className="d-flex justify-content-center mb-4">
-              <div style={{ width: '80px', height: '4px', backgroundColor: 'white' }}></div>
-            </div>
-            <p className="text-white mb-5" style={{ fontSize: '1.1rem' }}>
+    <>
+      <style>
+        {`
+          *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
+
+          .specialtiesSection{
+            width:100%;
+            background:linear-gradient(135deg, #4D9BD6, #199A6F);
+            padding:clamp(80px, 8vw, 100px) 0;
+            marginTop:120px;
+            font-family:'Inter', sans-serif;
+            position:relative;
+            overflow:hidden;
+          }
+
+          .specialtiesContainer{
+            max-width:1280px;
+            margin:auto;
+            padding:0 24px;
+          }
+
+          .specialtiesHeader{
+            text-align:center;
+            margin-bottom:64px;
+          }
+
+          .specialtiesTitle{
+            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            line-height:1.02;
+            font-weight:900;
+            color:#ffffff;
+            letter-spacing:-0.08em;
+            max-width:900px;
+            margin:auto;
+            margin-bottom:22px;
+          }
+
+          .specialtiesDivider{
+            width:80px;
+            height:4px;
+            background:#ffffff;
+            margin:auto;
+            margin-bottom:24px;
+          }
+
+          .specialtiesDescription{
+            font-size:18px;
+            color:#ffffff;
+            opacity:0.9;
+            line-height:1.6;
+            margin-bottom:64px;
+          }
+
+          .specialtyItem{
+            padding:0 12px;
+            text-align:center;
+          }
+
+          .specialtyIcon{
+            width:90px;
+            height:90px;
+            border-radius:50%;
+            background:#ffffff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin:auto;
+            margin-bottom:15px;
+            transition:0.3s;
+            box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+          }
+
+          .specialtyIcon:hover{
+            transform:translateY(-5px);
+            box-shadow:0px 8px 20px rgba(0,0,0,0.15);
+          }
+
+          .specialtyIcon img{
+            width:45px;
+            height:45px;
+            filter:invert(46%) sepia(83%) saturate(1265%) hue-rotate(165deg) brightness(96%) contrast(101%);
+          }
+
+          .specialtyName{
+            font-size:16px;
+            font-weight:500;
+            color:#ffffff;
+            margin:0;
+          }
+
+          .specialtiesButtonContainer{
+            text-align:center;
+            margin-top:48px;
+          }
+
+          .specialtiesButton{
+            background:#199A6F;
+            color:#ffffff;
+            border:none;
+            padding:12px 24px;
+            border-radius:50px;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            transition:0.22s;
+            box-shadow:0px 4px 16px rgba(25,154,111,0.3);
+          }
+
+          .specialtiesButton:hover{
+            background:#17A85F;
+            transform:translateY(-2px);
+            box-shadow:0px 8px 24px rgba(25,154,111,0.4);
+          }
+
+          @media(max-width:991px){
+            .specialtiesTitle{
+              font-size:42px;
+            }
+          }
+
+          @media(max-width:600px){
+            .specialtiesSection{
+              padding:80px 15px;
+            }
+
+            .specialtiesTitle{
+              font-size:34px;
+            }
+
+            .specialtiesDescription{
+              font-size:16px;
+              margin-bottom:40px;
+            }
+
+            .specialtyIcon{
+              width:70px;
+              height:70px;
+              margin-bottom:12px;
+            }
+
+            .specialtyIcon img{
+              width:35px;
+              height:35px;
+            }
+
+            .specialtyName{
+              font-size:14px;
+            }
+          }
+        `}
+      </style>
+
+      <section className="specialtiesSection">
+        <div className="specialtiesContainer">
+          <div className="specialtiesHeader">
+            <h2 className="specialtiesTitle">Medical Specialties We Support</h2>
+            <div className="specialtiesDivider"></div>
+            <p className="specialtiesDescription">
               Trained VAs familiar with your workflows and terminology.
             </p>
-          </Col>
-        </Row>
+          </div>
 
-        <Row>
-          <Col>
-            <Slider {...settings}>
-              {specialties.map((specialty, index) => (
-                <div key={index} className="px-3">
-                  <div className="text-center" style={{ color: 'white' }}>
-                    <div style={{
-                      width: '90px',
-                      height: '90px',
-                      margin: '0 auto 15px',
-                      backgroundColor: '#ffffff',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      transition: 'all 0.3s ease',
-                      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'translateY(-5px)';
-                      e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.15)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
-                    }}
-                    >
-                      <img 
-                        src={specialty.icon} 
-                        alt={specialty.name}
-                        style={{
-                          width: '45px',
-                          height: '45px',
-                          filter: 'invert(46%) sepia(83%) saturate(1265%) hue-rotate(165deg) brightness(96%) contrast(101%)'
-                        }}
-                      />
-                    </div>
-                    <h6 className="mb-0" style={{ fontSize: '1rem', fontWeight: '500' }}>
-                      {specialty.name}
-                    </h6>
-                  </div>
+          <Slider {...settings}>
+            {specialties.map((specialty, index) => (
+              <div key={index} className="specialtyItem">
+                <div className="specialtyIcon">
+                  <img src={specialty.icon} alt={specialty.name} />
                 </div>
-              ))}
-            </Slider>
-          </Col>
-        </Row>
+                <h6 className="specialtyName">{specialty.name}</h6>
+              </div>
+            ))}
+          </Slider>
 
-        <Row className="justify-content-center mt-5">
-          <Col className="text-center">
-            <a
-              href="#schedule-demo"
-              className="btn px-4 py-2 rounded-pill"
-              style={{
-                backgroundColor: '#00E676',
-                color: 'white',
-                border: 'none',
-                fontSize: '1rem',
-                fontWeight: '600',
-                padding: '12px 24px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px'
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = '#00C853';
-                e.target.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = '#00E676';
-                e.target.style.transform = 'translateY(0)';
-              }}
-            >
+          <div className="specialtiesButtonContainer">
+            <button className="specialtiesButton">
               Schedule Free Demo <span>→</span>
-            </a>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

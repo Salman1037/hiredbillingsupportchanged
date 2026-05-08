@@ -41,7 +41,8 @@ const IntegrateOverhead = () => {
           .integrateOverheadSection {
             width: 100%;
             background: #ffffff;
-            padding: clamp(60px, 6vw, 80px) 0;
+            padding: clamp(80px, 8vw, 100px) 0;
+            marginTop: 120px;
           }
 
           .integrateOverheadContainer {
@@ -104,6 +105,13 @@ const IntegrateOverhead = () => {
             padding: 32px 28px 32px;
             min-height: 320px;
             box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+          }
+
+          .stepCard:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(25, 154, 111, 0.14);
+            border-color: #199a6f;
           }
 
           .stepCircle {
