@@ -15,6 +15,8 @@ import Emr from '../../components/Hire/Emr';
 import CountUpStats from '../../components/CountUpStats';
 import Difference from '../../components/difference';
 import ClientReview from '../../components/client_review';
+import Ctasection from '../../components/Hire/Ctasection';
+import Dentalpractice from '../../components/Hire/Dental/Dentalpractice';
 
 
 
@@ -26,14 +28,17 @@ function Dental() {
       <CountUpStats/>
             <Dentalteam />
             {/* <MedicalspecialtiesDental /> */}
+             <Dentalpractice />
+             <DentalVA />
               <Medicalcore />
            
-               
-                <DentalVA />
+              
+                
                  <HBSAgencies/>
                   <Difference/>
         <ClientReview/>
                 <Faqdental/>
+                <Ctasection/>
                
                 
      

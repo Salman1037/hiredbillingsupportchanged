@@ -16,6 +16,9 @@ import CountUpStats from '../../components/CountUpStats';
 import HowItWorks from '../../components/Hire/Dental/Howitwork';
 import Difference from '../../components/difference';
 import ClientReview from '../../components/client_review';
+import Ctasection from '../../components/Hire/Ctasection';
+import Teamhandle from '../../components/Hire/Teamhandle';
+import IntegrateOverhead from '../../components/Hire/Integrateoverhead';
 
 function Medical() {
   return (
@@ -31,16 +34,19 @@ function Medical() {
           
           
       <Readygoal />
+        <MedicalVA />
+       
+        <Teamhandle />
          <Medicalcore />
       
-      <MedicalVA />
+     <IntegrateOverhead />
     
        <HowItWorks/>
        <HBSAgencies/>
         <Difference/>
         <ClientReview/>
       <Faq/>
-     
+      <Ctasection/>
       {/* <Emr/>
       <Contact /> */}
     </>

@@ -1,38 +1,31 @@
 
 import React from 'react';
-import { FaPhoneSlash, FaMoneyBillWave, FaBalanceScale, FaTired, FaSearch, FaBullseye } from 'react-icons/fa';
 
-const MedicalVA = () => {
+const Dentalpractice = () => {
   const challenges = [
     {
-      icon: <FaPhoneSlash />,
-      title: 'Dropped Calls',
-      description: "Patients can't reach you. Appointments go unmade. Revenue is lost before it starts. Front desk is overwhelmed.",
+      title: '⚠️ Insurance Changes',
+      description: 'Plan updates, code changes, authorization requirements—constantly.',
     },
     {
-      icon: <FaMoneyBillWave />,
-      title: 'Revenue Leakage',
-      description: 'Claims sit unprocessed for weeks. Insurance verification is incomplete. You\'re leaving money on the table every single day.',
+      title: '💸 Revenue Leakage',
+      description: 'Insurance delays payments. Claims sit unapproved.',
     },
     {
-      icon: <FaBalanceScale />,
-      title: 'Rising Denials',
-      description: 'Insurance companies use AI to increase denials. Claims get rejected for missing information or code errors. No one fights the appeals.',
+      title: '📄 Manual Work',
+      description: 'Insurance verification is manual. Front desk spends hours on calls.',
     },
     {
-      icon: <FaTired />,
-      title: 'Staff Burnout',
-      description: 'Your team is overwhelmed managing billing, scheduling, and insurance. Turnover is high. Training new staff is endless.',
+      title: '😫 Staff Burnout',
+      description: 'Team overwhelmed. Insurance calls, claim chasing, denials.',
     },
     {
-      icon: <FaSearch />,
-      title: 'No Visibility',
-      description: "You don't know your financial metrics. AR days? Denial rates? Patient acquisition cost? It's all a mystery to you.",
+      title: '🚫 High Denials',
+      description: 'Insurance denies claims constantly. Missing documentation.',
     },
     {
-      icon: <FaBullseye />,
-      title: 'System Chaos',
-      description: 'Multiple vendors, fragmented systems, no coordination. EHR, practice management, clearinghouse—all separate. Data doesn\'t flow.',
+      title: '👀 No Visibility',
+      description: 'Claim status? Denial rates? You don’t know your metrics.',
     },
   ];
 
@@ -46,9 +39,8 @@ const MedicalVA = () => {
     >
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-          
-
+        <div style={{ textAlign: 'left', marginBottom: '32px' }}>
+         
             <h2 className="mb-3" style={{ 
               color: '#002856', 
               fontSize: '2.5rem', 
@@ -62,7 +54,7 @@ const MedicalVA = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                 Medical practices face unique &nbsp;
+                Dental practices struggle with&nbsp;
               </span>
 
               <span
@@ -72,20 +64,20 @@ const MedicalVA = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-              operational challenges
+               insurance complexity
               </span>
             </h2>
           <p
             style={{
               fontSize: '1rem',
               fontWeight: 400,
-              color: '#475569',
-              lineHeight: 1.6,
+              color: '#64748B',
+              lineHeight: 1.7,
               maxWidth: '760px',
-              margin: '0 auto',
+              margin: '0',
             }}
           >
-            Doctors want to focus on patient care, but admin work consumes 40-50% of staff time
+            Dental insurance changes constantly, eating your team’s time and money
           </p>
         </div>
 
@@ -119,28 +111,12 @@ const MedicalVA = () => {
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(15, 76, 129, 0.06)';
               }}
             >
-              {/* Icon */}
-              <div
-                style={{
-                  fontSize: '28px',
-                  marginBottom: '16px',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '40px',
-                  height: '40px',
-                  color: '#E63946',
-                }}
-              >
-                {item.icon}
-              </div>
-
               {/* Title */}
               <h3
                 style={{
                   fontSize: '1.05rem',
                   fontWeight: 700,
-                  color: '#0F172A',
+                  color: '#0F3B70',
                   marginBottom: '12px',
                   marginTop: '0px',
                   lineHeight: 1.4,
@@ -152,10 +128,10 @@ const MedicalVA = () => {
               {/* Description */}
               <p
                 style={{
-                  fontSize: '0.92rem',
+                  fontSize: '0.95rem',
                   fontWeight: 400,
-                  color: '#475569',
-                  lineHeight: 1.5,
+                  color: '#64748B',
+                  lineHeight: 1.7,
                   marginBottom: '0px',
                 }}
               >
@@ -169,4 +145,4 @@ const MedicalVA = () => {
   );
 };
 
-export default MedicalVA;
+export default Dentalpractice;

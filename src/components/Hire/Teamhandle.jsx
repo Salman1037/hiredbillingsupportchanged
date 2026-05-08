@@ -4,34 +4,34 @@ import { FaPhoneAlt, FaClipboardList, FaLock, FaFileInvoiceDollar, FaBolt, FaCha
 const Teamhandle = () => {
   const services = [
     {
+      icon: <FaPhoneAlt />,
+      title: 'Patient Call Handling',
+      description: 'Professional answering & scheduling. Every call captured. Zero dropped calls. Reminders & confirmations included.',
+    },
+    {
+      icon: <FaClipboardList />,
+      title: 'Appointment Scheduling',
+      description: 'Optimization & reminders. 98% show-up rate. Pre-visit checks. Time management that respects your schedule.',
+    },
+    {
       icon: <FaLock />,
       title: 'Insurance Verification',
-      description: '100% verification before appointment. Zero surprises.',
+      description: 'Pre-authorization, benefits, coverage limits. Done BEFORE the patient arrives. Zero surprises on billing.',
     },
     {
       icon: <FaFileInvoiceDollar />,
-      title: 'Claim Submission',
-      description: 'Accurate coding, proper authorization. 95%+ first-time acceptance.',
+      title: 'Medical Billing & Claims',
+      description: 'Accurate coding, claim submission, compliance. HIPAA-certified. Every claim submitted correctly the first time.',
     },
     {
       icon: <FaBolt />,
       title: 'Denial Management',
-      description: 'AI-powered analysis, proactive appeals. 35% denial reduction.',
-    },
-    {
-      icon: <FaPhoneAlt />,
-      title: 'Payment Processing',
-      description: 'Fast reimbursements, insurance follow-ups, collections.',
+      description: 'AI-powered appeal strategy, root cause analysis. 45% denial reduction. We fight every denial aggressively.',
     },
     {
       icon: <FaChartLine />,
-      title: 'Reporting & Analytics',
-      description: 'Real-time dashboards, claim tracking, denial trends.',
-    },
-    {
-      icon: <FaClipboardList />,
-      title: 'Patient Billing Support',
-      description: 'Explanation of benefits, payment plans, clear communication.',
+      title: 'AR & Financial Reporting',
+      description: 'Real-time dashboards, KPI tracking, predictive forecasts. You know exactly where your money is at all times.',
     },
   ];
 
@@ -45,7 +45,9 @@ const Teamhandle = () => {
     >
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-        
+          
+
+
             <h2 className="mb-3" style={{ 
               color: '#002856', 
               fontSize: '2.5rem', 
@@ -59,7 +61,7 @@ const Teamhandle = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                 Everything dental insurance—&nbsp;
+                One team handles everything from&nbsp;
               </span>
 
               <span
@@ -69,7 +71,7 @@ const Teamhandle = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-               fully managed
+                patient call to payment
               </span>
             </h2>
           <p
@@ -82,7 +84,7 @@ const Teamhandle = () => {
               fontWeight: 400,
             }}
           >
-            Verifications, claims, payments—we handle it all
+            End-to-end medical revenue cycle management designed specifically for your practice
           </p>
         </div>
 

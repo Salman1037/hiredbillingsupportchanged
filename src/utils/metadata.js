@@ -302,7 +302,10 @@ export const metadata = {
         title: "Healthcare Billing Blog - HBS",
         description: "Stay informed with the latest insights, best practices, and industry updates in medical billing, healthcare compliance, and revenue cycle management from HBS experts.",
         keywords: "medical billing blog, healthcare billing insights, RCM best practices, billing industry news"
+    },
+    hire: {
+        title: "Hire Billing Support - HBS",
+        description: "Hire expert billing support for your healthcare practice. Get the help you need to optimize your revenue cycle and improve financial performance.",
+        keywords: "hire billing support, healthcare billing, revenue cycle management, medical billing services"
     }
-  
-    
 };

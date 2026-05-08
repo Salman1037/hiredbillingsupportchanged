@@ -74,6 +74,7 @@ import CostEvaluation from './Pages/cost-evaluation';
 import StartUps from './Pages/Whoweserve/start-ups';
 import Payers from './Pages/Whoweserve/payers';
 import MedicalOrderTransmission from './Pages/Whoweserve/medical-order-transmission';
+import Hire from './Pages/Hiretalent/Hire';
 
 
 
@@ -238,6 +239,9 @@ function MetadataManager() {
                     return metadata.developerPortal;
                     case '/cost-evaluation':
                       return metadata.costEvaluation;
+                      case '/hire':
+                        return metadata.hire;
+               
 
          
 
@@ -344,6 +348,7 @@ function AppContent() {
         <Route path="/quality-assurance" element={<QualityAssurance />} />
         <Route path="/operations-management" element={<OperationsManagement />} />
         <Route path="/start-ups" element={<StartUps />} />
+        <Route path="/hire" element={<Hire />} />
         <Route path="/small-medical-practices" element={<SmallMedicalPractices />} />
         <Route path="/medium-large-medical-practices" element={<MediumLargeMedicalPractices />} />
         <Route path="/enterprise-medical-operation" element={<EnterpriseMedicalOperations />} />
