@@ -214,7 +214,7 @@ const MedicalVA = () => {
         background: '#F5F7FB',
         padding: 'clamp(80px, 8vw, 100px) 0',
         width: '100%',
-        marginTop: '120px',
+        // marginTop: '120px',
       }}
     >
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>

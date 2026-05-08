@@ -42,7 +42,7 @@ const Teamhandle = () => {
         width: '100%',
         background: '#ffffff',
         padding: 'clamp(80px, 8vw, 100px) 0',
-        marginTop: '120px',
+        // marginTop: '120px',
       }}
       
     >

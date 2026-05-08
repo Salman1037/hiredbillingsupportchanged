@@ -306,7 +306,7 @@ const DentalHero = () => {
               </h1>
 
               <p style={{ fontSize: "17px", lineHeight: "1.6", color: "#475569", marginBottom: "28px" }}>
-                HBS finds, certifies, and manages compliant remote clinical support professionals trained on leading EHR systems.
+               Dental insurance is broken. Authorizations change. Claims get rejected. We manage the chaos so your team can do what they love—create beautiful smiles.
               </p>
 
               <div style={{ display: "flex", gap: "10px" }}>

@@ -37,6 +37,7 @@ function Medical() {
         <MedicalVA />
        
         <Teamhandle />
+        
          <Medicalcore />
       
      <IntegrateOverhead />

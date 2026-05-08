@@ -66,7 +66,7 @@ const Medicalcore = () => {
 
           .medicalCoreSection{
             width:100%;
-            background:#ffffff;
+            background:#F5F7FB;
             padding:clamp(80px, 8vw, 100px) 0;
             marginTop:120px;
             font-family:'Inter', sans-serif;
@@ -109,7 +109,7 @@ const Medicalcore = () => {
           }
 
           .serviceCard{
-            background:#f8f9fa;
+            background:#ffffff;
             padding:32px 24px;
             border-radius:16px;
             text-align:center;
