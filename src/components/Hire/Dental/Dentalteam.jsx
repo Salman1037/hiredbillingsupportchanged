@@ -67,7 +67,7 @@ const Readygoal = () => {
               color: '#002856', 
               fontSize: '2.5rem', 
               fontWeight: '700',
-              fontFamily: "'Plus Jakarta Sans', sans-serif"
+              fontFamily: "var(--bs-heading-font-family)"
             }}>
               <span
                 style={{
@@ -115,7 +115,7 @@ const Readygoal = () => {
                 color: '#002856', 
                 fontSize: '1.5rem', 
                 fontWeight: '700',
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontFamily: "var(--bs-heading-font-family)",
                 marginBottom: '0.5rem'
               }}>
                 {role.title}

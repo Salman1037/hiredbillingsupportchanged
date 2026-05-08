@@ -41,7 +41,7 @@ const Faq = () => {
             background:#f5f5f5;
             padding:clamp(80px, 8vw, 100px) 0;
             marginTop:120px;
-            font-family:'Inter', sans-serif;
+            font-family: var(--bs-body-font-family);
           }
 
           .faqContainer{
@@ -97,7 +97,7 @@ const Faq = () => {
             display:flex;
             align-items:center;
             justify-content:space-between;
-            font-family:'Inter', sans-serif;
+            font-family: var(--bs-body-font-family);
             transition:0.22s;
           }
 

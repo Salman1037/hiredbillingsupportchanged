@@ -61,17 +61,16 @@ function ComplianceHbs() {
 				}
 
 				.trust .section-header h2 {
-					font-family: 'Inter', 'Open Sans', Arial, sans-serif;
-					font-size: clamp(1.8rem, 3vw, 2.6rem);
-					font-weight: 900;
-					color: #0f172a;
-					letter-spacing: -0.02em;
-					margin: 0 0 10px 0;
-				}
+				font-family: var(--bs-heading-font-family);
+				font-size: clamp(1.8rem, 3vw, 2.6rem);
+				font-weight: 900;
+				color: #0f172a;
+				letter-spacing: -0.02em;
+				margin: 0 0 10px 0;
+			}
 
-				.trust .section-header p {
-					font-family: 'Inter', 'Open Sans', Arial, sans-serif;
-					font-size: 1rem;
+			.trust .section-header p {
+				font-family: var(--bs-body-font-family);
 					color: #475569;
 					margin: 0;
 				}
@@ -128,15 +127,14 @@ function ComplianceHbs() {
 				}
 
 				.trust-item h3 {
-					font-family: 'Inter', 'Open Sans', Arial, sans-serif;
-					font-size: 1.05rem;
-					margin: 0 0 6px 0;
-					color: #0f172a;
-				}
+				font-family: var(--bs-heading-font-family);
+				font-size: 1.05rem;
+				margin: 0 0 6px 0;
+				color: #0f172a;
+			}
 
-				.trust-item p {
-					font-family: 'Inter', 'Open Sans', Arial, sans-serif;
-					color: #475569;
+			.trust-item p {
+				font-family: var(--bs-body-font-family);
 					font-size: 0.92rem;
 					margin: 0;
 					line-height: 1.5;

@@ -43,6 +43,7 @@ const IntegrateOverhead = () => {
             background: #ffffff;
             padding: clamp(80px, 8vw, 100px) 0;
             marginTop: 120px;
+            font-family: var(--bs-body-font-family);
           }
 
           .integrateOverheadContainer {
@@ -190,7 +191,7 @@ const IntegrateOverhead = () => {
               color: '#002856', 
               fontSize: '2.5rem', 
               fontWeight: '700',
-              fontFamily: "'Plus Jakarta Sans', sans-serif"
+              fontFamily: "var(--bs-heading-font-family)"
             }}>
               <span
                 style={{

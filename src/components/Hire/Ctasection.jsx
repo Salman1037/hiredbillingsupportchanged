@@ -5,7 +5,7 @@ const Ctasection = () => {
         backgroundColor: "#E0F7EF",
         padding: "clamp(80px, 8vw, 60px) 20px",
         // marginTop: "120px",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "var(--bs-body-font-family)",
         textAlign: "center",
       }}
     >

@@ -35,7 +35,7 @@ const HBSAgencies = () => {
             background:#ffffff;
             padding:clamp(80px, 8vw, 100px) 0;
             marginTop:120px;
-            font-family:'Inter', sans-serif;
+            font-family: var(--bs-body-font-family);
           }
 
           .agenciesContainer{
@@ -206,8 +206,32 @@ const HBSAgencies = () => {
       <section className="agenciesSection">
         <div className="agenciesContainer">
           <div className="agenciesHeader">
-            <h2 className="agenciesTitle">
-              <span>HBS vs. VA</span> <span>Agencies</span>
+            
+             <h2 className="mb-3" style={{ 
+              color: '#002856', 
+              fontSize: '2.5rem', 
+              fontWeight: '700',
+              fontFamily: "var(--bs-heading-font-family)"
+            }}>
+              <span
+                style={{
+                  background: ' #3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                 HBS vs. VA&nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: ' #1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                Agencies
+              </span>
             </h2>
             <p className="agenciesDescription">
               Discover what our vetted virtual medical receptionists do for hundreds of healthcare practices.

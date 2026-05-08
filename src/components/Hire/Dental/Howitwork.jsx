@@ -116,7 +116,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontFamily: "'Inter', 'Open Sans', Arial, sans-serif",
+    fontFamily: "var(--bs-body-font-family)",
   },
   badge: {
     display: "inline-block",
@@ -189,7 +189,7 @@ const styles = {
     borderRadius: "50%",
     background: "linear-gradient(135deg, #3498db, #1abc9c)",
     color: "#fff",
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "var(--bs-body-font-family)",
     fontSize: "20px",
     fontWeight: 900,
     display: "flex",
@@ -201,7 +201,7 @@ const styles = {
     flexShrink: 0,
   },
   stepTitle: {
-    fontFamily: "'Inter', 'Open Sans', Arial, sans-serif",
+    fontFamily: "var(--bs-heading-font-family)",
     fontSize: "1.05rem",
     fontWeight: 700,
     color: "#0f172a",

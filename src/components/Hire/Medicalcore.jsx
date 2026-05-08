@@ -69,7 +69,7 @@ const Medicalcore = () => {
             background:#F5F7FB;
             padding:clamp(80px, 8vw, 100px) 0;
             marginTop:120px;
-            font-family:'Inter', sans-serif;
+            font-family: var(--bs-body-font-family);
           }
 
           .medicalCoreContainer{
@@ -206,7 +206,33 @@ const Medicalcore = () => {
       <section className="medicalCoreSection">
         <div className="medicalCoreContainer">
           <div className="medicalCoreHeader">
-            <h2 className="medicalCoreTitle">Our Core Services</h2>
+           
+             <h2 className="mb-3" style={{ 
+              color: '#002856', 
+              fontSize: '2.5rem', 
+              fontWeight: '700',
+              fontFamily: "var(--bs-heading-font-family)"
+            }}>
+              <span
+                style={{
+                  background: ' #3498db',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                 Our Core&nbsp;
+              </span>
+
+              <span
+                style={{
+                  background: ' #1abc9c',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                  Services
+              </span>
+            </h2>
             <p className="medicalCoreDescription">
               Medical Billing Services by us enables healthcare providers to concentrate on giving incredible consideration. Through observing the SOPs of each practice and following them diligently, we find the best and most effective billings to keep your practice going smoothly. With you focused on patient experience, we engage in billing and coding to aid your business.
             </p>

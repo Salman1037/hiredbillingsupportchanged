@@ -49,7 +49,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-const heroFontStack = 'Inter, Open Sans, Arial, sans-serif';
+const heroFontStack = 'var(--bs-body-font-family)';
 
 const Card = ({ item, type, index, visible }) => {
   const [hovered, setHovered] = useState(false);

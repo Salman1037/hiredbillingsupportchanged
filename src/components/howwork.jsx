@@ -77,7 +77,7 @@ const styles = {
     marginBottom: '32px',
   },
   h2: {
-    fontFamily: "'Inter', 'Open Sans', Arial, sans-serif",
+    fontFamily: "var(--bs-heading-font-family)",
     fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
     fontWeight: 900,
     color: '#0f172a',
@@ -85,7 +85,7 @@ const styles = {
     margin: '0 0 10px 0',
   },
   p: {
-    fontFamily: "'Inter', 'Open Sans', Arial, sans-serif",
+    fontFamily: "var(--bs-body-font-family)",
     fontSize: '1rem',
     color: '#475569',
     maxWidth: 600,
@@ -117,7 +117,7 @@ export default function SolutionAndHowItWorks() {
         }
 
         .how-work-header h2 {
-          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-family: var(--bs-heading-font-family);
           font-size: clamp(1.8rem, 3vw, 2.6rem);
           font-weight: 900;
           color: #0f172a;
@@ -126,7 +126,7 @@ export default function SolutionAndHowItWorks() {
         }
 
         .how-work-header p {
-          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-family: var(--bs-body-font-family);
           font-size: 1rem;
           color: #475569;
           margin: 0;
@@ -169,14 +169,14 @@ export default function SolutionAndHowItWorks() {
         }
 
         .how-work-card h3 {
-          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-family: var(--bs-heading-font-family);
           font-size: 1.05rem;
           margin: 0 0 6px 0;
           color: #0f172a;
         }
 
         .how-work-card p {
-          font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+          font-family: var(--bs-body-font-family);
           color: #475569;
           font-size: 0.92rem;
           margin: 0;

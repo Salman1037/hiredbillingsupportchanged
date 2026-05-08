@@ -51,7 +51,7 @@ const Teamhandle = () => {
               color: '#002856', 
               fontSize: '2.5rem', 
               fontWeight: '700',
-              fontFamily: "'Plus Jakarta Sans', sans-serif"
+              fontFamily: "var(--bs-heading-font-family)"
             }}>
               <span
                 style={{

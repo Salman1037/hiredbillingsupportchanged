@@ -224,7 +224,7 @@ const Dentalpractice = () => {
               color: '#002856',
               fontSize: '2.5rem',
               fontWeight: '700',
-              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontFamily: "var(--bs-heading-font-family)",
               lineHeight: '1.2',
               marginBottom: '18px',
             }}
