@@ -41,13 +41,13 @@ const Faqdental = () => {
           <Col lg={8} className="text-center">
             <h2 style={{ 
               color: '#00A6E6',
-              fontSize: '2.5rem',
+              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
               fontWeight: '700',
               marginBottom: '1rem'
             }}>
               Frequently Asked Questions
             </h2>
-            <p className="text-muted" style={{ fontSize: '1.1rem' }}>
+            <p className="text-muted" style={{ fontSize: '16px' }}>
               Common questions about our dental virtual assistant services and how we can help your practice.
             </p>
           </Col>
@@ -72,7 +72,7 @@ const Faqdental = () => {
                     <div className="d-flex align-items-center justify-content-between w-100">
                       <span style={{ 
                         color: '#002856',
-                        fontSize: '1.1rem',
+                        fontSize: '16px',
                         fontWeight: '600'
                       }}>
                         {faq.question}
@@ -97,7 +97,7 @@ const Faqdental = () => {
                     paddingLeft: '0',
                     paddingRight: '0',
                     color: '#666',
-                    fontSize: '1rem',
+                    fontSize: '15px',
                     lineHeight: '1.6'
                   }}>
                     {faq.answer}

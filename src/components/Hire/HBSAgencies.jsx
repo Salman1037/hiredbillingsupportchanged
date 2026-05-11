@@ -50,7 +50,7 @@ const HBSAgencies = () => {
           }
 
           .agenciesTitle{
-            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
             font-weight:900;
             color:#4D9BD6;
@@ -75,7 +75,7 @@ const HBSAgencies = () => {
             max-width:560px;
             margin:22px auto 0;
             text-align:center;
-            font-size:clamp(1.05rem, 2vw, 1.35rem);
+            font-size:16px;
             line-height:1.6;
             color:#52525B;
           }
@@ -112,7 +112,7 @@ const HBSAgencies = () => {
           .cardHeader{
             background:linear-gradient(135deg, #4D9BD6, #199A6F);
             color:#ffffff;
-            padding:20px 24px;
+            padding:8px 12px;
             border-radius:12px;
             text-align:center;
             margin-bottom:32px;
@@ -121,8 +121,8 @@ const HBSAgencies = () => {
           }
 
           .comparisonCard.other .cardHeader{
-            background:#f5f5f5;
-            color:#52525B;
+           background:linear-gradient(135deg, #4D9BD6, #199A6F);
+            color:#ffffff;
           }
 
           .featureList{
@@ -195,10 +195,7 @@ const HBSAgencies = () => {
               padding:32px 24px;
             }
 
-            .cardHeader{
-              padding:16px 20px;
-              font-size:18px;
-            }
+            
           }
         `}
       </style>
@@ -209,7 +206,7 @@ const HBSAgencies = () => {
             
              <h2 className="mb-3" style={{ 
               color: '#002856', 
-              fontSize: '2.5rem', 
+              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', 
               fontWeight: '700',
               fontFamily: "var(--bs-heading-font-family)"
             }}>

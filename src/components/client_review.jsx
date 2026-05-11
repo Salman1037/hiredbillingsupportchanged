@@ -140,7 +140,7 @@ const ClientReview = () => (
         }
       }
     `}</style>
-    <h2 style={{ textAlign: "center", fontSize: "clamp(2rem, 3vw, 2.7rem)", fontWeight: 900, marginBottom: 8, letterSpacing: -1, lineHeight: 1.1 }}>
+    <h2 style={{ textAlign: "center", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 900, marginBottom: 8, letterSpacing: -1, lineHeight: 1.1 }}>
       <span
         style={{
           background: "#3498db",
@@ -161,7 +161,7 @@ const ClientReview = () => (
         Take <b>theirs</b>.
       </span>
     </h2>
-    <p style={{ textAlign: "center", color: "#64748b", margin: "0 auto", maxWidth: 700, padding: "0 20px", fontSize: "1.03rem", lineHeight: 1.6 }}>
+    <p style={{ textAlign: "center", color: "#64748b", margin: "0 auto", maxWidth: 700, padding: "0 20px", fontSize: "16px", lineHeight: 1.6 }}>
       Real feedback from healthcare and operations teams that rely on HBS every day.
     </p>
     <div className="cr-grid">

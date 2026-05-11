@@ -96,7 +96,7 @@ const CountUpStats = () => {
     <section style={{ padding: 'clamp(40px, 6vw, 64px) 0' }} ref={sectionRef}>
       <div className="container">
         <div className="  text-center">
-          <h2 style={{ fontWeight: 'bold' }}>
+          <h2 style={{ fontWeight: '700', fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', marginBottom: '1.5rem', color: '#0F172A' }}>
             <span
               style={{
                 background: ' #3498db',

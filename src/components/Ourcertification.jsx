@@ -36,7 +36,7 @@ const styles = `
   }
 
   .cert-heading {
-    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
     font-weight: 700;
     text-align: center;
     line-height: 1.15;
@@ -61,7 +61,7 @@ const styles = `
 
   .cert-desc {
     text-align: center;
-    font-size: 15.5px;
+    font-size: 16px;
     color: #64748B;
     line-height: 1.72;
     max-width: 580px;

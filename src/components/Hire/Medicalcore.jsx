@@ -84,7 +84,7 @@ const Medicalcore = () => {
           }
 
           .medicalCoreTitle{
-            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
             font-weight:900;
             color:#4D9BD6;
@@ -95,7 +95,7 @@ const Medicalcore = () => {
           }
 
           .medicalCoreDescription{
-            font-size:18px;
+            font-size:16px;
             color:#52525B;
             line-height:1.6;
             max-width:800px;
@@ -139,7 +139,7 @@ const Medicalcore = () => {
           }
 
           .serviceTitle{
-            font-size:22px;
+            font-size:20px;
             font-weight:700;
             color:#4D9BD6;
             margin-bottom:16px;
@@ -147,7 +147,7 @@ const Medicalcore = () => {
           }
 
           .serviceDescription{
-            font-size:16px;
+            font-size:15px;
             color:#52525B;
             line-height:1.5;
             margin:0;
@@ -209,7 +209,7 @@ const Medicalcore = () => {
            
              <h2 className="mb-3" style={{ 
               color: '#002856', 
-              fontSize: '2.5rem', 
+              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', 
               fontWeight: '700',
               fontFamily: "var(--bs-heading-font-family)"
             }}>

@@ -56,7 +56,7 @@ const Faq = () => {
           }
 
           .faqTitle{
-            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
             font-weight:900;
             color:#4D9BD6;
@@ -70,7 +70,7 @@ const Faq = () => {
             max-width:560px;
             margin:22px auto 0;
             text-align:center;
-            font-size:clamp(1.05rem, 2vw, 1.35rem);
+            font-size:16px;
             line-height:1.6;
             color:#52525B;
           }
@@ -106,7 +106,7 @@ const Faq = () => {
           }
 
           .faqQuestion{
-            font-size:18px;
+            font-size:16px;
             font-weight:600;
             color:#4D9BD6;
             line-height:1.4;
@@ -141,7 +141,7 @@ const Faq = () => {
           }
 
           .faqAnswer{
-            font-size:16px;
+            font-size:15px;
             line-height:30px;
             color:#52525B;
             margin:0;

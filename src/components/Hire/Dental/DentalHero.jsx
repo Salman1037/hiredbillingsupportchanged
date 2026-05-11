@@ -305,7 +305,7 @@ const DentalHero = () => {
                 <span style={{ color: "#199A6F" }}>so you can focus on patient smiles.</span>
               </h1>
 
-              <p style={{ fontSize: "17px", lineHeight: "1.6", color: "#475569", marginBottom: "28px" }}>
+              <p style={{ fontSize: "16px", lineHeight: "1.6", color: "#475569", marginBottom: "28px" }}>
                Dental insurance is broken. Authorizations change. Claims get rejected. We manage the chaos so your team can do what they love—create beautiful smiles.
               </p>
 

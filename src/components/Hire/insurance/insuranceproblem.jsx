@@ -1,38 +1,51 @@
-
 import React from 'react';
-import { FaPhoneSlash, FaMoneyBillWave, FaBalanceScale, FaTired, FaSearch, FaBullseye } from 'react-icons/fa';
+import {
+  FaBan,
+  FaHeartBroken,
+  FaChartLine,
+  FaTired,
+  FaBullseye,
+  FaMoneyBillWave,
+} from 'react-icons/fa';
+import insurance from '../../../Pages/Hiretalent/insurance';
 
-const MedicalVA = () => {
+const insuranceproblem = () => {
   const challenges = [
     {
-      icon: <FaPhoneSlash />,
-      title: 'Dropped Calls',
-      description: "Patients can't reach you. Appointments go unmade. Revenue is lost before it starts. Front desk is overwhelmed.",
+      icon: <FaBan />,
+      title: 'Denial Epidemic',
+      description:
+        'Behavioral health faces the highest denial rates in healthcare (30-40%). Insurance companies intentionally deny mental health, substance abuse, and telehealth claims. Fighting each denial manually takes 5-10 hours per week.',
     },
     {
-      icon: <FaMoneyBillWave />,
-      title: 'Revenue Leakage',
-      description: 'Claims sit unprocessed for weeks. Insurance verification is incomplete. You\'re leaving money on the table every single day.',
+      icon: <FaHeartBroken />,
+      title: 'Authorization Delays',
+      description:
+        'Insurance companies use prior authorization as a gatekeeping tool. Delayed authorizations = delayed patient care. Patients wait days for treatment. Insurance companies buy time for denials.',
     },
     {
-      icon: <FaBalanceScale />,
-      title: 'Rising Denials',
-      description: 'Insurance companies use AI to increase denials. Claims get rejected for missing information or code errors. No one fights the appeals.',
+      icon: <FaChartLine />,
+      title: 'Telehealth Chaos',
+      description:
+        'Telehealth reimbursement varies by state, modality, and insurance company. Different rules for video vs phone vs chat. Different rules for synchronous vs asynchronous. Different rules for group vs individual. Your team can’t keep up.',
     },
     {
       icon: <FaTired />,
       title: 'Staff Burnout',
-      description: 'Your team is overwhelmed managing billing, scheduling, and insurance. Turnover is high. Training new staff is endless.',
-    },
-    {
-      icon: <FaSearch />,
-      title: 'No Visibility',
-      description: "You don't know your financial metrics. AR days? Denial rates? Patient acquisition cost? It's all a mystery to you.",
+      description:
+        'Your staff is frustrated. Insurance calls, authorization chasing, denial fighting, state compliance rules. You’re training the third billing person this year. Each one burns out within 12 months.',
     },
     {
       icon: <FaBullseye />,
-      title: 'System Chaos',
-      description: 'Multiple vendors, fragmented systems, no coordination. EHR, practice management, clearinghouse—all separate. Data doesn\'t flow.',
+      title: 'Growth Blocked',
+      description:
+        'You want to expand services. Add locations. Add modalities. But your billing infrastructure can’t handle it. Growth = more insurance complexity = more staff needed = unsustainable.',
+    },
+    {
+      icon: <FaMoneyBillWave />,
+      title: 'Revenue Leakage',
+      description:
+        'Uncollected denials. Missed rebilling deadlines. Patient balances that fell through cracks. Denied authorizations that never got resubmitted. You’re losing $500K-2M per year silently.',
     },
   ];
 
@@ -42,7 +55,6 @@ const MedicalVA = () => {
         background: '#F5F7FB',
         padding: 'clamp(80px, 8vw, 100px) 0',
         width: '100%',
-        // marginTop: '120px',
       }}
     >
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
@@ -56,26 +68,27 @@ const MedicalVA = () => {
               fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
               fontWeight: '700',
               fontFamily: "var(--bs-heading-font-family)",
+              lineHeight: 1.3,
             }}
           >
             <span
               style={{
-                background: ' #3498db',
+                background: '#3498db',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Medical practices face unique &nbsp;
+              Behavioral health reimbursement is broken.&nbsp;
             </span>
 
             <span
               style={{
-                background: ' #1abc9c',
+                background: '#1abc9c',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              operational challenges
+              Insurance companies know it.
             </span>
           </h2>
 
@@ -89,7 +102,8 @@ const MedicalVA = () => {
               margin: '0 auto',
             }}
           >
-            Doctors want to focus on patient care, but admin work consumes 40-50% of staff time
+            Behavioral health providers are drowning in denials, authorizations,
+            compliance complexity, and reimbursement chaos.
           </p>
         </div>
 
@@ -144,7 +158,7 @@ const MedicalVA = () => {
                   height: '44px',
                   borderRadius: '14px',
                   background: 'rgba(25, 154, 111, 0.12)',
-                  color: '#199A6F',
+                  color: '#2E86DE',
                 }}
               >
                 {item.icon}
@@ -184,4 +198,4 @@ const MedicalVA = () => {
   );
 };
 
-export default MedicalVA;
+export default insuranceproblem;

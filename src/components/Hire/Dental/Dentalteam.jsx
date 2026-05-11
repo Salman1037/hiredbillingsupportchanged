@@ -65,7 +65,7 @@ const Readygoal = () => {
           <Col lg={10} className="text-center">
             <h2 className="mb-3" style={{ 
               color: '#002856', 
-              fontSize: '2.5rem', 
+              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', 
               fontWeight: '700',
               fontFamily: "var(--bs-heading-font-family)"
             }}>
@@ -113,7 +113,7 @@ const Readygoal = () => {
             <Col lg={10} md={9}>
               <h3 style={{ 
                 color: '#002856', 
-                fontSize: '1.5rem', 
+                fontSize: '1rem', 
                 fontWeight: '700',
                 fontFamily: "var(--bs-heading-font-family)",
                 marginBottom: '0.5rem'

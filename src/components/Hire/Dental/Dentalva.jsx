@@ -49,7 +49,7 @@ const Teamhandle = () => {
         
             <h2 className="mb-3" style={{ 
               color: '#002856', 
-              fontSize: '2.5rem', 
+              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', 
               fontWeight: '700',
               fontFamily: "var(--bs-heading-font-family)"
             }}>
@@ -97,8 +97,8 @@ const Teamhandle = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '18px',
           }}
         >
           {services.map((service, index) => (
@@ -107,9 +107,8 @@ const Teamhandle = () => {
               style={{
                 background: '#FFFFFF',
                 borderRadius: '16px',
-                padding: '22px 20px',
+                padding: '20px',
                 boxShadow: '0 6px 24px rgba(15, 23, 42, 0.06)',
-                minHeight: '260px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
@@ -146,7 +145,7 @@ const Teamhandle = () => {
               <h3
                 style={{
                   margin: 0,
-                  fontSize: '1.05rem',
+                  fontSize: '1rem',
                   lineHeight: 1.4,
                   fontWeight: 700,
                   color: '#0F172A',
@@ -158,7 +157,7 @@ const Teamhandle = () => {
               <p
                 style={{
                   margin: 0,
-                  fontSize: '0.92rem',
+                  fontSize: '15px',
                   lineHeight: 1.5,
                   color: '#475569',
                   flex: 1,

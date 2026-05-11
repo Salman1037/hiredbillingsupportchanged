@@ -2,9 +2,8 @@ const Ctasection = () => {
   return (
     <section
       style={{
-        backgroundColor: "#E0F7EF",
+        background: "linear-gradient(135deg, #00B4D8 0%, #00F5A0 100%)",
         padding: "clamp(80px, 8vw, 60px) 20px",
-        // marginTop: "120px",
         fontFamily: "var(--bs-body-font-family)",
         textAlign: "center",
       }}
@@ -17,14 +16,15 @@ const Ctasection = () => {
             display: "inline-flex",
             alignItems: "center",
             gap: "6px",
-            background: "#F0FDF4",
-            color: "#166534",
+            background: "rgba(255,255,255,0.18)",
+            color: "#ffffff",
             padding: "6px 14px",
             borderRadius: "99px",
             fontSize: "12px",
             fontWeight: 600,
-            border: "1px solid #DCFCE7",
+            border: "1px solid rgba(255,255,255,0.25)",
             marginBottom: "36px",
+            backdropFilter: "blur(6px)",
           }}
         >
           <span
@@ -32,7 +32,7 @@ const Ctasection = () => {
               width: "6px",
               height: "6px",
               borderRadius: "50%",
-              background: "#22C55E",
+              background: "#ffffff",
               display: "inline-block",
               flexShrink: 0,
             }}
@@ -43,24 +43,24 @@ const Ctasection = () => {
         {/* Heading */}
         <h1
           style={{
-            fontSize: "52px",
+            fontSize: "clamp(2.2rem, 5vw, 3.2rem)",
             fontWeight: 800,
             lineHeight: 1.15,
-            color: "#4D9BD6",
+            color: "#ffffff",
             marginBottom: "20px",
             letterSpacing: "-1px",
           }}
         >
           Your next full-time hire
           <br />
-          is <span style={{ color: "#199A6F" }}>7 days away</span>
+          is <span style={{ color: "#0F172A" }}>7 days away</span>
         </h1>
 
         {/* Subtitle */}
         <p
           style={{
             fontSize: "15px",
-            color: "#475569",
+            color: "rgba(255,255,255,0.9)",
             lineHeight: 1.7,
             marginBottom: "32px",
           }}
@@ -76,8 +76,8 @@ const Ctasection = () => {
             display: "inline-flex",
             alignItems: "center",
             gap: "8px",
-            background: "#4D9BD6",
-            color: "#ffffff",
+            background: "#ffffff",
+            color: "#00B4D8",
             fontWeight: 700,
             fontSize: "15px",
             padding: "16px 32px",
@@ -85,10 +85,17 @@ const Ctasection = () => {
             border: "none",
             cursor: "pointer",
             marginBottom: "28px",
-            transition: "background 0.2s",
+            transition: "all 0.2s ease",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#3a87c2")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#4D9BD6")}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-2px)";
+            e.currentTarget.style.background = "#f8fafc";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.background = "#ffffff";
+          }}
         >
           Book a Demo
           <svg
@@ -97,7 +104,7 @@ const Ctasection = () => {
             height="16"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="#ffffff"
+            stroke="#00B4D8"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -114,10 +121,14 @@ const Ctasection = () => {
             gap: "28px",
             flexWrap: "wrap",
             fontSize: "13px",
-            color: "#166534",
+            color: "#ffffff",
           }}
         >
-          {["No payment until you hire", "BAA signed before start", "Cancel anytime"].map((item) => (
+          {[
+            "No payment until you hire",
+            "BAA signed before start",
+            "Cancel anytime",
+          ].map((item) => (
             <span
               key={item}
               style={{ display: "flex", alignItems: "center", gap: "6px" }}
@@ -128,7 +139,7 @@ const Ctasection = () => {
                 height="14"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="#22C55E"
+                stroke="#ffffff"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"

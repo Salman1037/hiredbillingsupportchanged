@@ -27,7 +27,7 @@ export default function Difference() {
     <section style={{ padding: 'clamp(40px, 6vw, 64px) 1.25rem', background: '#fff' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
-          <h2 style={{ display: 'inline-block', lineHeight: 1.1 }}>
+          <h2 style={{ display: 'inline-block', lineHeight: 1.1, fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 700 }}>
 						<span
 							style={{
 								background: '#3498db',
@@ -47,7 +47,7 @@ export default function Difference() {
 							everything else
 						</span>
 					</h2>
-          <p style={{ marginTop: 8, color: colors.muted }}>They find you a freelancer. We build you a team.</p>
+          <p style={{ marginTop: 8, color: colors.muted, fontSize: '16px' }}>They find you a freelancer. We build you a team.</p>
         </div>
 
         <div style={{ overflowX: 'auto' }}>

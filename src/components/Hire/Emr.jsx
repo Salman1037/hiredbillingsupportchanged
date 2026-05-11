@@ -44,7 +44,7 @@ const EHRSection = () => {
           }
 
           .ehrTitle{
-            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
             font-weight:900;
             color:#4D9BD6;
@@ -74,7 +74,7 @@ const EHRSection = () => {
           }
 
           .ehrDescription{
-            font-size:18px;
+            font-size:16px;
             color:#52525B;
             line-height:1.6;
             margin-bottom:64px;

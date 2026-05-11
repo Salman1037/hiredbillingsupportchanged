@@ -67,7 +67,7 @@ const IntegrateOverhead = () => {
           }
 
           .integrateSubtitle {
-            font-size: clamp(1rem, 1.2vw, 1.15rem);
+            font-size: 16px;
             line-height: 1.8;
             color: #52525b;
             max-width: 680px;
@@ -136,14 +136,14 @@ const IntegrateOverhead = () => {
           .stepTitle {
             margin-top: 34px;
             margin-bottom: 12px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             line-height: 1.35;
             font-weight: 700;
             color: #0f3b70;
           }
 
           .stepDescription {
-            font-size: 1rem;
+            font-size: 15px;
             line-height: 1.8;
             color: #52525b;
           }
@@ -189,7 +189,7 @@ const IntegrateOverhead = () => {
 
             <h2 className="mb-3" style={{ 
               color: '#002856', 
-              fontSize: '2.5rem', 
+              fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', 
               fontWeight: '700',
               fontFamily: "var(--bs-heading-font-family)"
             }}>
