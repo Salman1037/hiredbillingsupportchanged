@@ -19,7 +19,7 @@ const HireStaffHero = () => {
     <section
       style={{
         background: "#FFFFFF",
-        padding: "clamp(80px, 8vw, 100px) 0",
+        padding: "100px 0",
         textAlign: "center",
         fontFamily: "'Inter', sans-serif",
         minHeight: "auto",
@@ -31,8 +31,8 @@ const HireStaffHero = () => {
       {/* Heading */}
       <h1
         style={{
-          fontSize: "clamp(2.6rem, 5.8vw, 4.4rem)",
-          fontWeight: 900,
+          fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
+          fontWeight: 700,
           color: "#4D9BD6",
           lineHeight: 1.02,
           marginBottom: "0px",
@@ -45,9 +45,9 @@ const HireStaffHero = () => {
       {/* Tagline */}
       <p
         style={{
-          fontSize: "15px",
-          fontWeight: 600,
-          color: "#199A6F",
+          fontSize: "16px",
+          fontWeight: 400,
+          color: "#475569",
           marginBottom: "10px",
           marginTop: "16px",
         }}
@@ -58,9 +58,9 @@ const HireStaffHero = () => {
       {/* Sub text */}
       <p
         style={{
-          fontSize: "clamp(1.05rem, 2vw, 1.35rem)",
+          fontSize: "16px",
           fontWeight: 400,
-          color: "#52525B",
+          color: "#475569",
           lineHeight: 1.6,
           maxWidth: "560px",
           margin: "22px auto 32px",
@@ -106,8 +106,8 @@ const HireStaffHero = () => {
             <span
               style={{
                 display: "block",
-                fontSize: "11.5px",
-                color: "#52525B",
+                fontSize: "12px",
+                color: "#475569",
                 fontWeight: 500,
                 marginTop: "4px",
               }}
@@ -136,7 +136,7 @@ const HireStaffHero = () => {
             padding: "13px 32px",
             borderRadius: "12px",
             fontWeight: 700,
-            fontSize: "1.08rem",
+            fontSize: "16px",
             textDecoration: "none",
             display: "inline-block",
             transition: "background 0.22s, box-shadow 0.22s, transform 0.22s",
@@ -177,7 +177,7 @@ const HireStaffHero = () => {
             padding: "13px 32px",
             borderRadius: "12px",
             fontWeight: 700,
-            fontSize: "1.08rem",
+            fontSize: "16px",
             border: "1.5px solid #E5E7EB",
             cursor: "pointer",
             transition: "all 0.22s",
@@ -205,10 +205,10 @@ const HireStaffHero = () => {
       {/* Trust Label */}
       <p
         style={{
-          fontSize: "11px",
+          fontSize: "12px",
           fontWeight: 700,
           letterSpacing: "0.12em",
-          color: "#199A6F",
+          color: "#475569",
           textTransform: "uppercase",
           marginBottom: "20px",
         }}
@@ -245,9 +245,9 @@ const HireStaffHero = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "10px",
+                fontSize: "12px",
                 fontWeight: 800,
-                color: "#64748B",
+                color: "#475569",
                 flexShrink: 0,
               }}
             >
@@ -257,7 +257,7 @@ const HireStaffHero = () => {
               style={{
                 fontSize: "12px",
                 fontWeight: 700,
-                color: "#64748B",
+                color: "#475569",
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
               }}

@@ -38,9 +38,8 @@ const Faq = () => {
 
           .faqSection{
             width:100%;
-            background:#f5f5f5;
-            padding:clamp(80px, 8vw, 100px) 0;
-            marginTop:120px;
+            background:#FFFFFF;
+            padding:100px 0;
             font-family: var(--bs-body-font-family);
           }
 
@@ -58,7 +57,7 @@ const Faq = () => {
           .faqTitle{
             font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
-            font-weight:900;
+            font-weight:700;
             color:#4D9BD6;
             letter-spacing:-0.08em;
             max-width:900px;
@@ -72,7 +71,7 @@ const Faq = () => {
             text-align:center;
             font-size:16px;
             line-height:1.6;
-            color:#52525B;
+            color:#475569;
           }
 
           .faqAccordion{
@@ -141,9 +140,9 @@ const Faq = () => {
           }
 
           .faqAnswer{
-            font-size:15px;
+            font-size:16px;
             line-height:30px;
-            color:#52525B;
+            color:#475569;
             margin:0;
           }
 

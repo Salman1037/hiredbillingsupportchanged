@@ -38,9 +38,8 @@ const TestimonialsSection = () => {
 
           .testimonialsSection{
             width:100%;
-            padding:clamp(80px, 8vw, 100px) 0;
+            padding:100px 0;
             background:#f5f5f5;
-            marginTop:120px;
           }
 
           .testimonialsContainer{
@@ -60,17 +59,17 @@ const TestimonialsSection = () => {
             border-radius:18px;
             border:1px solid #BCEFDC;
             background:#E0F7EF;
-            color:#199A6F;
-            font-size:15px;
+            color:#475569;
+            font-size:16px;
             font-weight:600;
             letter-spacing:0.1px;
           }
 
           .mainHeading{
             text-align:center;
-            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
-            font-weight:900;
+            font-weight:700;
             color:#4D9BD6;
             letterSpacing:-0.08em;
             margin-bottom:60px;
@@ -98,7 +97,7 @@ const TestimonialsSection = () => {
           .quoteText{
             font-size:16px;
             line-height:1.6;
-            color:#52525B;
+            color:#475569;
             margin-bottom:28px;
             min-height:90px;
           }
@@ -123,28 +122,28 @@ const TestimonialsSection = () => {
             display:flex;
             align-items:center;
             justify-content:center;
-            font-size:13px;
+            font-size:12px;
             font-weight:700;
           }
 
           .userText h4{
-            font-size:15px;
+            font-size:16px;
             font-weight:700;
             color:#4D9BD6;
             margin-bottom:5px;
           }
 
           .userText p{
-            font-size:13px;
-            color:#52525B;
+            font-size:12px;
+            color:#475569;
           }
 
           .caseStudyBtn{
             margin-top:18px;
             border:none;
             background:none;
-            color:#199A6F;
-            font-size:15px;
+            color:#4D9BD6;
+            font-size:16px;
             font-weight:700;
             display:flex;
             align-items:center;
@@ -368,19 +367,15 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Dots */}
-          <div className="dotsWrapper">
-            <div className="dot activeDot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
+         
 
           {/* Bottom Link */}
-          <div className="storiesLink">
+          {/* <div className="storiesLink">
             <a href="/">
               See all customer stories
               <FaArrowRight size={13} />
             </a>
-          </div>
+          </div> */}
 
         </div>
       </section>

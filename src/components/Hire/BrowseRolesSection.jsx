@@ -91,9 +91,8 @@ const BrowseRoles = () => {
 
           .browseRoles{
             width:100%;
-            padding:clamp(80px, 8vw, 100px) 0;
+            padding:100px 0;
             background:#f5f5f5;
-            marginTop:120px;
             fontFamily: "'Inter', sans-serif;
           }
 
@@ -114,17 +113,17 @@ const BrowseRoles = () => {
             padding:4px 18px;
             border-radius:18px;
             background:#E0F7EF;
-            color:#199A6F;
-            font-size:15px;
+            color:#475569;
+            font-size:16px;
             font-weight:600;
             letter-spacing:0.1px;
           }
 
           .mainHeading{
             text-align:center;
-            font-size:clamp(2.6rem, 5.8vw, 4.4rem);
+            font-size:clamp(2.2rem, 4vw, 3.2rem);
             line-height:1.02;
-            font-weight:900;
+            font-weight:700;
             color:#4D9BD6;
             letter-spacing:-0.08em;
             max-width:900px;
@@ -135,9 +134,9 @@ const BrowseRoles = () => {
             max-width:560px;
             margin:22px auto 0;
             text-align:center;
-            font-size:clamp(1.05rem, 2vw, 1.35rem);
+            font-size:16px;
             line-height:1.6;
-            color:#52525B;
+            color:#475569;
           }
 
           .tabsWrapper{
@@ -177,7 +176,7 @@ const BrowseRoles = () => {
             border-radius:12px;
             border:1.5px solid #E5E7EB;
             background:#fff;
-            font-size:1.08rem;
+            font-size:16px;
             font-weight:700;
             color:#18181B;
             cursor:pointer;
@@ -226,7 +225,7 @@ const BrowseRoles = () => {
 
           .roleTitle h3{
             color:#4D9BD6;
-            font-size:22px;
+            font-size:18px;
             line-height:30px;
             font-weight:700;
             margin-bottom:14px;
@@ -237,7 +236,7 @@ const BrowseRoles = () => {
           }
 
           .roleDescription p{
-            color:#52525B;
+            color:#475569;
             font-size:16px;
             line-height:30px;
           }
@@ -251,7 +250,7 @@ const BrowseRoles = () => {
           .learnMore button{
             border:none;
             background:transparent;
-            color:#199A6F;
+            color:#4D9BD6;
             font-size:16px;
             font-weight:700;
             cursor:pointer;
