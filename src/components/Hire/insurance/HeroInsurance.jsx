@@ -110,10 +110,10 @@ const InsuranceHero = () => {
                   letterSpacing: "-0.04em",
                 }}
               >
-                We maximize your reimbursements
+                We maximize  reimbursements 
                 <br />
                 <span style={{ color: "#199A6F" }}>
-                  so you can expand care without expanding overhead.
+                so you expand care effortlessly
                 </span>
               </h1>
 
