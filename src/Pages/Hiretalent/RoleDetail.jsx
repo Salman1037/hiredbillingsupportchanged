@@ -870,7 +870,7 @@ const RoleDetail = () => {
                 </div>
                 <div className="featureBox">
                   <div className="featureBoxTitle">Discreet support</div>
-                  <div className="featureBoxText">Sensitive tasks are handled away from the patient�s direct view.</div>
+                  <div className="featureBoxText">Sensitive tasks are handled away from the patient's direct view.</div>
                 </div>
               </div>
             </div>
@@ -911,7 +911,7 @@ const RoleDetail = () => {
           <div className="testimonialsGrid">
             {testimonials.map((item, index) => (
               <div key={index} className="testimonialCard">
-                <p className="testimonialQuote">�{item.quote}�</p>
+                <p className="testimonialQuote">{item.quote}</p>
                 <div className="testimonialAuthor">{item.author}</div>
                 <div className="testimonialRole">{item.role}</div>
               </div>
@@ -942,7 +942,7 @@ const RoleDetail = () => {
 
       <section className="roleDetailContainer bottomCta">
         <h2>Your next full-time hire is 7 days away</h2>
-        <p>Book a demo and we�ll match you with a pre-vetted professional in 7 days or less.</p>
+        <p>Book a demo and we'll match you with a pre-vetted professional in 7 days or less.</p>
         <a href="/contact" className="bottomCtaButton">Hire Now</a>
       </section>
     </>

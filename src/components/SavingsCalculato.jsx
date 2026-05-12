@@ -288,7 +288,7 @@ const SavingsCalculator = () => {
 const s = {
   field: { display: 'flex', flexDirection: 'column', gap: '8px' },
   label: {
-    fontFamily: "'DM Sans', sans-serif",
+    // fontFamily: "'DM Sans', sans-serif",
     fontSize: '11px',
     fontWeight: 700,
     letterSpacing: '1.4px',
@@ -305,7 +305,7 @@ const s = {
     borderRadius: '10px',
     padding: '13px 44px 13px 16px',
     fontSize: '14.5px',
-    fontFamily: "'DM Sans', sans-serif",
+   
     fontWeight: 500,
     color: '#1E293B',
     cursor: 'pointer',
@@ -329,7 +329,7 @@ const CSS = `
     background: #F1F5F9;
     padding: clamp(40px, 6vw, 64px) 24px;
     overflow: hidden;
-    font-family: 'DM Sans', sans-serif;
+    
   }
 
   .sc-blob {
@@ -375,7 +375,7 @@ const CSS = `
   }
 
   .sc-heading {
-    font-family: 'Fraunces', serif;
+   
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     color: #0F172A;
@@ -449,7 +449,7 @@ const CSS = `
     border: none;
     border-radius: 50px;
     padding: 14px 32px;
-    font-family: 'DM Sans', sans-serif;
+   
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
@@ -516,7 +516,7 @@ const CSS = `
   }
 
   .sc-dollar {
-    font-family: 'Fraunces', serif;
+  
     font-size: 2rem;
     font-weight: 700;
     color: rgba(255,255,255,0.8);
@@ -524,7 +524,7 @@ const CSS = `
   }
 
   .sc-big-num {
-    font-family: 'Fraunces', serif;
+  
     font-size: clamp(2.6rem, 7vw, 3.8rem);
     font-weight: 800;
     color: #fff;
@@ -553,7 +553,7 @@ const CSS = `
   }
 
   .sc-badge-num {
-    font-family: 'Fraunces', serif;
+   
     font-size: 1.8rem;
     font-weight: 800;
     color: #fff;
@@ -596,7 +596,7 @@ const CSS = `
   }
 
   .sc-stat-val {
-    font-family: 'Fraunces', serif;
+  
     font-size: 1.3rem;
     font-weight: 700;
     color: #1E293B;

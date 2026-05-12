@@ -139,6 +139,8 @@ const Dentalpractice = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
+                alignItems: 'center',
+                textAlign: 'center',
                 transition:
                   'transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease',
                 border: '1px solid #E2E8F0',
@@ -201,6 +203,7 @@ const Dentalpractice = () => {
                   lineHeight: 1.6,
                   color: '#475569',
                   flex: 1,
+                  textAlign: 'center',
                 }}
               >
                 {item.description}

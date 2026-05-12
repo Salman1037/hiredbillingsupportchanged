@@ -107,6 +107,10 @@ const IntegrateOverhead = () => {
             min-height: 320px;
             box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
           }
 
           .stepCard:hover {
@@ -140,6 +144,7 @@ const IntegrateOverhead = () => {
             line-height: 1.35;
             font-weight: 700;
             color: #0f3b70;
+            width: 100%;
           }
 
           .stepDescription {

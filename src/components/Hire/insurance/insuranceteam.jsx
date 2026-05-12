@@ -254,6 +254,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    textAlign: "center",
     padding: "28px 20px 22px",
     flex: 1,
     position: "relative",

@@ -128,6 +128,8 @@ const insuranceproblem = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
+                alignItems: 'center',
+                textAlign: 'center',
                 transition:
                   'transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease',
                 border: '1px solid #E2E8F0',
@@ -186,6 +188,7 @@ const insuranceproblem = () => {
                   color: '#475569',
                   lineHeight: 1.5,
                   marginBottom: '0px',
+                  textAlign: 'center',
                 }}
               >
                 {item.description}

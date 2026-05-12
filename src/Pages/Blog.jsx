@@ -8,7 +8,6 @@ import Endocrinology from "../assets/images/blog/Endocrinology_Billing_Coding.we
 import Armenegment from "../assets/images/blog/AR_Management_CashFlow.webp";
 import rcmservices from "../assets/images/blog/RCM_Revenue_Independent.webp";
 import rvenuecyclemanagement from "../assets/images/blog/Revenue_Cycle_Management.webp";
-
 import blogBg1 from "../assets/images/backgrounds/bg-image03.jpg";
 import blogBg2 from "../assets/images/backgrounds/bg-image04.jpg";
 import { Link } from "react-router-dom";
@@ -342,8 +341,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-
-      {/* Custom CSS */}
+       {/* Custom CSS */}
       <style>{`
         @keyframes fadeInUp {
           from {

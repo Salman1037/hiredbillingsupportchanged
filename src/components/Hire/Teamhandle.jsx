@@ -119,6 +119,8 @@ const Teamhandle = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
+                alignItems: 'center',
+                textAlign: 'center',
                 transition: 'transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease',
                 border: '1px solid #E2E8F0',
               }}
@@ -168,6 +170,7 @@ const Teamhandle = () => {
                   lineHeight: 1.5,
                   color: '#475569',
                   flex: 1,
+                  textAlign: 'center',
                 }}
               >
                 {service.description}
