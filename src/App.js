@@ -75,6 +75,7 @@ import StartUps from './Pages/Whoweserve/start-ups';
 import Payers from './Pages/Whoweserve/payers';
 import MedicalOrderTransmission from './Pages/Whoweserve/medical-order-transmission';
 import Hire from './Pages/Hiretalent/Hire';
+import RoleDetail from './Pages/Hiretalent/RoleDetail';
 
 
 
@@ -90,6 +91,17 @@ function MetadataManager() {
         return metadata.caseStudies[slug];
       }
       return metadata.caseStudy; // fallback to generic case study metadata
+    }
+    
+    // Handle dynamic role detail routes
+    if (path.startsWith('/role/')) {
+      const roleSlug = path.replace('/role/', '');
+      const roleTitle = roleSlug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      return {
+        title: `${roleTitle} - HBS Hiring`,
+        description: `Learn more about our ${roleTitle} position and how HBS can help your practice.`,
+        keywords: `${roleTitle}, hire, HBS`
+      };
     }
     
     switch(path) {
@@ -349,6 +361,7 @@ function AppContent() {
         <Route path="/operations-management" element={<OperationsManagement />} />
         <Route path="/start-ups" element={<StartUps />} />
         <Route path="/hire" element={<Hire />} />
+        <Route path="/role/:roleSlug" element={<RoleDetail />} />
         <Route path="/small-medical-practices" element={<SmallMedicalPractices />} />
         <Route path="/medium-large-medical-practices" element={<MediumLargeMedicalPractices />} />
         <Route path="/enterprise-medical-operation" element={<EnterpriseMedicalOperations />} />

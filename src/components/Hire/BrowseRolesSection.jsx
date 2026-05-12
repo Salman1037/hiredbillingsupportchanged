@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BrowseRoles = () => {
   const [activeTab, setActiveTab] = useState("Medical");
@@ -7,26 +8,31 @@ const BrowseRoles = () => {
     Medical: [
       {
         title: "Medical Scribe",
+        slug: "medical-scribe",
         description:
           "Documents clinical encounters in real time - reducing physician admin burden by 40+ hours a month so you can see more patients.",
       },
       {
         title: "Medical Scheduling Coordinator",
+        slug: "medical-scheduling-coordinator",
         description:
           "Manages appointment scheduling, patient reminders, and calendar optimization - keeping your schedule full and your practice running smoothly.",
       },
       {
         title: "Medical Insurance Coordinator",
+        slug: "medical-insurance-coordinator",
         description:
           "Handles insurance verification, pre-authorizations, and claims - so your clinical team stays focused on patient care.",
       },
       {
         title: "Medical Billing Coordinator",
+        slug: "medical-billing-coordinator",
         description:
           "Processes claims, tracks payments, manages collections, and follows up on denials - keeping your revenue cycle on track.",
       },
       {
         title: "Patient Care Coordinator",
+        slug: "patient-care-coordinator",
         description:
           "Coordinates patient intake, referrals, and follow-ups - improving care continuity and patient experience.",
       },
@@ -35,21 +41,25 @@ const BrowseRoles = () => {
     Dental: [
       {
         title: "Dental Receptionist",
+        slug: "dental-receptionist",
         description:
           "Handles patient communication, scheduling, and front desk operations for smooth clinic management.",
       },
       {
         title: "Dental Insurance Coordinator",
+        slug: "dental-insurance-coordinator",
         description:
           "Verifies dental insurance, processes claims, and manages patient billing support efficiently.",
       },
       {
         title: "Dental Treatment Coordinator",
+        slug: "dental-treatment-coordinator",
         description:
           "Assists patients with treatment plans, scheduling, and financing coordination.",
       },
       {
         title: "Dental Billing Specialist",
+        slug: "dental-billing-specialist",
         description:
           "Tracks invoices, payments, insurance submissions, and outstanding balances.",
       },
@@ -58,21 +68,25 @@ const BrowseRoles = () => {
     Insurance: [
       {
         title: "Claims Specialist",
+        slug: "claims-specialist",
         description:
           "Processes insurance claims efficiently while ensuring policy compliance and accuracy.",
       },
       {
         title: "Insurance Verification Coordinator",
+        slug: "insurance-verification-coordinator",
         description:
           "Handles policy verification and eligibility checks for streamlined operations.",
       },
       {
         title: "Policy Support Assistant",
+        slug: "policy-support-assistant",
         description:
           "Provides customer support and assists with policy updates and renewals.",
       },
       {
         title: "Insurance Billing Coordinator",
+        slug: "insurance-billing-coordinator",
         description:
           "Manages invoicing, collections, and billing workflows for insurance operations.",
       },
@@ -204,7 +218,7 @@ const BrowseRoles = () => {
 
           .roleCard{
             background:#fff;
-            border:1px solid #dddddd;
+            border:1px solid #e5e7eb;
             border-radius:18px;
             padding:30px 28px;
             display:flex;
@@ -217,6 +231,7 @@ const BrowseRoles = () => {
           .roleCard:hover{
             transform:translateY(-4px);
             box-shadow:0px 10px 35px rgba(0,0,0,0.08);
+            border-color: #199A6F;
           }
 
           .roleTitle{
@@ -354,7 +369,7 @@ const BrowseRoles = () => {
             </h2>
 
           <p className="mainText">
-            Edge provides fully managed, HIPAA-certified remote admin staff
+            HBS provides fully managed, HIPAA-certified remote admin staff
             across medical, dental, and insurance operations. Select your
             industry to browse available roles.
           </p>
@@ -398,9 +413,11 @@ const BrowseRoles = () => {
                 </div>
 
                 <div className="learnMore">
-                  <button>
-                    Learn More <span>&#8594;</span>
-                  </button>
+                  <Link to={`/role/${item.slug}`} style={{ textDecoration: 'none' }}>
+                    <button>
+                      Learn More <span>&#8594;</span>
+                    </button>
+                  </Link>
                 </div>
 
               </div>

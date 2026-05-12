@@ -12,8 +12,6 @@ import InsuranceTeam from "../../components/Hire/insurance/insuranceteam";
 import Difference from "../../components/difference";
 import BehavioralHealthSection from "../../components/Hire/insurance/BehavioralHealthSection";
 import Ctasection from '../../components/Hire/Ctasection';
-
-
 function insurance() {
   return (
     <>
