@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import { MdCheckCircle } from "react-icons/md";
 import { IoArrowBack } from "react-icons/io5";
+import Ctasection from '../../components/Hire/Ctasection';
 
 const RoleDetail = () => {
   const { roleSlug } = useParams();
@@ -939,12 +940,9 @@ const RoleDetail = () => {
           </div>
         </div>
       </section>
+          <Ctasection/>
 
-      <section className="roleDetailContainer bottomCta">
-        <h2>Your next full-time hire is 7 days away</h2>
-        <p>Book a demo and we'll match you with a pre-vetted professional in 7 days or less.</p>
-        <a href="/contact" className="bottomCtaButton">Hire Now</a>
-      </section>
+    
     </>
   );
 };

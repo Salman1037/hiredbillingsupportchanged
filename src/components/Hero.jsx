@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 import DrAfreenImage from '../assets/images/avatar/img1.webp';
 import DrNagwaImage from '../assets/images/avatar/img2.webp';
 import DrNaikImage from '../assets/images/avatar/img3.webp';
+import HeroGif from '../assets/images/hero/hero_gif.gif';
 
 // --- Styles ---
 const heroSection = {
@@ -418,54 +419,16 @@ function Hero() {
               </ServiceCardPopup>
             </>
           </div>
-          <div style={cardGrid}>
-            <div style={topCardWrap}>
-              <div style={{
-                ...card,
-                minWidth: 240,
-                maxWidth: 270,
-                minHeight: 330, // Increased height
-                height: 330,
-                marginBottom: 0,
-                position: 'relative',
-                zIndex: 2,
-                ...floatingCard
-              }} className="hero-card top-card">
-                <img src={DrAfreenImage} alt="Dr. Afreen Sheikh" style={cardImg} className="hero-card-img" />
-                <div style={cardName}>Dr. Afreen Sheikh</div>
-                <div style={cardRole}>Patient Care Assistant</div>
-                <div style={cardTags}>
-                  <span style={tagGreen}>Verified</span>
-                  <span style={tag}>Medical</span>
-                  <span style={tagGreen}>Certified</span>
-                </div>
-              </div>
-            </div>
-            <div style={cardRow}>
-              <div style={{...card, marginTop: 0, minWidth: 220, maxWidth: 250, minHeight: 310, height: 310, position: 'relative', zIndex: 1, ...animatedCardDelay(0.3)}} className="hero-card">
-                <img src={DrNagwaImage} alt="Nagwa S. Awad" style={cardImg} className="hero-card-img" />
-                <div style={cardName}>Nagwa S. Awad</div>
-                <div style={cardRole}>Treatment Coordinator</div>
-                <div style={cardTags}>
-                  <span style={tagGreen}>Verified</span>
-                  <span style={tag}>Dental</span>
-                  <span style={tagGreen}>Certified</span>
-                </div>
-              </div>
-              <div style={{...card, marginTop: 0, minWidth: 220, maxWidth: 250, minHeight: 310, height: 310, position: 'relative', zIndex: 1, ...animatedCardDelay(0.5)}} className="hero-card">
-                <img src={DrNaikImage} alt="Dr. Harmesh Naik" style={cardImg} className="hero-card-img" />
-                <div style={cardName}>Dr. Harmesh Naik</div>
-                <div style={cardRole}>Insurance Auditor</div>
-                <div style={cardTags}>
-                  <span style={tagGreen}>Verified</span>
-                  <span style={tag}>Insurance</span>
-                  <span style={tagGreen}>Certified</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* three small cards of service with icons and description on hover like popup or any smooth effect will be */}
+          <img 
+            src={HeroGif} 
+            alt="HBS Hero Animation" 
+            style={{
+              maxWidth: '100%',
+              width: 'clamp(300px, 90%, 500px)',
+              height: 'auto',
+              marginTop: 28,
+            }}
+          />
           
         </div>
       </div>

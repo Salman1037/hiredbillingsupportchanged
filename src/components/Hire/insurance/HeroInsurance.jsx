@@ -25,6 +25,59 @@ const InsuranceHero = () => {
     return () => window.removeEventListener("resize", updatePadding);
   }, []);
 
+  const RoleCard = ({ role, isStaggered }) => (
+    <div style={{
+      background: "#FFFFFF",
+      borderRadius: "18px",
+      overflow: "hidden",
+      border: "1px solid #F1F5F9",
+      boxShadow: "0 8px 24px -6px rgba(0,0,0,0.06)",
+      transition: "all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)",
+      marginBottom: "14px",
+      transform: isStaggered ? "translateY(28px)" : "none",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = isStaggered ? "translateY(28px) translateY(-4px)" : "translateY(-6px)";
+      e.currentTarget.style.boxShadow = "0 14px 32px -8px rgba(0,0,0,0.08)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = isStaggered ? "translateY(28px)" : "none";
+      e.currentTarget.style.boxShadow = "0 8px 24px -6px rgba(0,0,0,0.06)";
+    }}
+    >
+      <div style={{ 
+        background: role.headerBg, 
+        height: "55px", 
+        display: "flex", 
+        alignItems: "center", 
+        justifyContent: "center", 
+        paddingRight: "0px" 
+      }}>
+         <div style={{ 
+           width: "36px", height: "36px", background: "#fff", 
+           borderRadius: "9px", display: "flex", alignItems: "center", 
+           justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" 
+         }}>
+           {role.icon}
+         </div>
+      </div>
+      <div style={{ padding: "14px 18px 16px", textAlign: "center" }}>
+        <h3 style={{ fontSize: "14px", fontWeight: "700", color: "#0F172A", margin: "0 0 4px 0" }}>{role.title}</h3>
+        <p style={{ fontSize: "11px", color: "#64748B", marginBottom: "0px", fontWeight: "500", margin: "0 0 8px 0" }}>{role.subtitle}</p>
+        <div style={{ display: "flex", gap: "5px", flexWrap: "wrap", justifyContent: "center" }}>
+          {role.badges.map((b, i) => (
+            <span key={i} style={{
+              fontSize: "9px", fontWeight: "600", padding: "3px 8px", borderRadius: "100px",
+              background: b.includes("✓") ? "#E8F5E9" : "#EFF6FF",
+              color: b.includes("✓") ? "#1B5E20" : "#0369A1",
+              border: `1px solid ${b.includes("✓") ? "#A5D6A7" : "#7DD3FC"}`
+            }}>{b}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   const roles = [
     {
       title: "Medical Scribe",
@@ -61,7 +114,7 @@ const InsuranceHero = () => {
       className="hero-section"
       style={{
         paddingTop: headerPad,
-        paddingBottom: "100px",
+        paddingBottom: "160px",
         background: "#FFFFFF",
         overflow: "hidden",
       }}
@@ -275,127 +328,15 @@ const InsuranceHero = () => {
 
           {/* RIGHT CARDS */}
           <div className="col-lg-6 col-md-12">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2, minmax(250px, 1fr))",
-                gap: "16px",
-                maxWidth: "560px",
-                marginLeft: "auto",
-              }}
-            >
-              {roles.map((role, i) => (
-                <div
-                  key={i}
-                  style={{
-                    background: "#FFFFFF",
-                    borderRadius: "18px",
-                    overflow: "hidden",
-                    border: "1px solid #EEF2F7",
-                    boxShadow: "0 12px 30px rgba(15,23,42,0.05)",
-                    transition: "all 0.35s ease",
-                    cursor: "pointer",
-                    position: "relative",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform =
-                      "translateY(-6px) scale(1.01)";
-                    e.currentTarget.style.boxShadow =
-                      "0 18px 40px rgba(15,23,42,0.12)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform =
-                      "translateY(0px) scale(1)";
-                    e.currentTarget.style.boxShadow =
-                      "0 12px 30px rgba(15,23,42,0.05)";
-                  }}
-                >
-                  {/* TOP */}
-                  <div
-                    style={{
-                      background: role.headerBg,
-                      padding: "14px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      minHeight: "62px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "46px",
-                        height: "46px",
-                        borderRadius: "12px",
-                        background: "#FFFFFF",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        boxShadow: "0 6px 16px rgba(0,0,0,0.05)",
-                      }}
-                    >
-                      {role.icon}
-                    </div>
-                  </div>
-
-                  {/* CONTENT */}
-                  <div style={{ padding: "16px 18px" }}>
-                    <h3
-                      style={{
-                        fontSize: "15px",
-                        fontWeight: "700",
-                        color: "#0F172A",
-                        marginBottom: "5px",
-                        lineHeight: "1.3",
-                      }}
-                    >
-                      {role.title}
-                    </h3>
-
-                    <p
-                      style={{
-                        fontSize: "12px",
-                        color: "#64748B",
-                        lineHeight: "1.45",
-                        marginBottom: "12px",
-                        minHeight: "32px",
-                      }}
-                    >
-                      {role.subtitle}
-                    </p>
-
-                    <div
-                      style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        gap: "6px",
-                      }}
-                    >
-                      {role.badges.map((badge, j) => (
-                        <span
-                          key={j}
-                          style={{
-                            fontSize: "10.5px",
-                            fontWeight: "600",
-                            padding: "4px 10px",
-                            borderRadius: "999px",
-                            background: badge.includes("✓")
-                              ? "#E8F5E9"
-                              : "#EFF6FF",
-                            color: badge.includes("✓")
-                              ? "#166534"
-                              : "#0369A1",
-                            border: badge.includes("✓")
-                              ? "1px solid #BBF7D0"
-                              : "1px solid #BFDBFE",
-                          }}
-                        >
-                          {badge}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div style={{ display: "flex", gap: "18px", position: "relative", paddingLeft: "20px", justifyContent: "center" }}>
+              <div style={{ flex: 0.95, maxWidth: "230px" }}>
+                <RoleCard role={roles[0]} isStaggered={false} />
+                <RoleCard role={roles[2]} isStaggered={false} />
+              </div>
+              <div style={{ flex: 0.95, maxWidth: "230px" }}>
+                <RoleCard role={roles[1]} isStaggered={true} />
+                <RoleCard role={roles[3]} isStaggered={true} />
+              </div>
             </div>
           </div>
         </div>

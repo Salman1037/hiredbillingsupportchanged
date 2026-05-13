@@ -331,7 +331,7 @@ const styles = {
   topRow: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     marginBottom: "22px",
   },
 
@@ -358,6 +358,7 @@ const styles = {
     color: "#0f172a",
     marginBottom: "14px",
     lineHeight: 1.4,
+    textAlign: "center",
   },
 
   cardDescription: {
@@ -365,6 +366,7 @@ const styles = {
     color: "#64748b",
     lineHeight: 1.7,
     margin: 0,
+    textAlign: "center",
   },
 
   metricsGrid: {
@@ -411,16 +413,18 @@ const styles = {
 
   trustCard: {
     display: "flex",
-    alignItems: "flex-start",
+    flexDirection: "column",
+    alignItems: "center",
     gap: "18px",
     padding: "24px",
     borderRadius: "20px",
     border: "1px solid #e2e8f0",
     background: "#f8fafc",
+    textAlign: "center",
   },
 
   trustIcon: {
-    minWidth: "56px",
+    width: "56px",
     height: "56px",
     borderRadius: "16px",
     background: "rgba(25,154,111,0.12)",
@@ -429,6 +433,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     fontSize: "24px",
+    margin: "0 auto",
   },
 
   trustTitle: {
@@ -436,6 +441,7 @@ const styles = {
     fontWeight: 800,
     color: "#0f172a",
     marginBottom: "8px",
+    textAlign: "center",
   },
 
   trustDescription: {
@@ -443,5 +449,6 @@ const styles = {
     lineHeight: 1.7,
     color: "#64748b",
     margin: 0,
+    textAlign: "center",
   },
 };

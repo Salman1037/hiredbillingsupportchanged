@@ -43,21 +43,11 @@ const HeroSection = () => {
                 textShadow: "0 2px 12px rgba(0,0,0,0.18)",
               }}
             >
-              End-to-End RCM <br />
-              <span style={{ fontWeight: 600, color: '#e0f2fe' }}>Services for</span> <br />
-              <span style={{ color: "#00b14f" }}>Hospitals &amp; Groups</span>
+              End Insurance Complexity. <br />
+              {/* <span style={{ fontWeight: 600, color: '#e0f2fe' }}>Services for</span> <br /> */}
+              <span style={{ color: "#00b14f" }}>Accelerate Practice Growth</span>
             </h1>
-            <h2
-              style={{
-                fontSize: "28px",
-                fontWeight: 600,
-                marginBottom: "18px",
-                color: "#e0f2fe",
-                letterSpacing: "-1px",
-              }}
-            >
-              Revenue Cycle Management
-            </h2>
+           
             <p
               style={{
                 fontSize: "20px",
@@ -67,7 +57,7 @@ const HeroSection = () => {
                 maxWidth: 500,
               }}
             >
-              We maximize clean claims, reduce denials, and accelerate reimbursements — working inside your EHR/PM with audit-ready workflows.
+             insurance companies are denying claims at record rates. Your team is drowning in follow-ups. Your growth is stalled. We manage the complexity so you can focus on what matters—delivering exceptional care and growing your practice.
             </p>
             <a
               href="/contact"

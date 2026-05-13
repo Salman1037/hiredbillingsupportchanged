@@ -161,12 +161,13 @@ const Problemsolution = () => {
                   height: '44px',
                   borderRadius: '14px',
                   background: 'rgba(25, 154, 111, 0.12)',
-                  display: 'inline-flex',
+                  display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#2E86DE',
                   fontSize: '24px',
                   marginBottom: '16px',
+                  margin: '0 auto 16px auto',
                 }}
               >
                 {service.icon}
@@ -180,6 +181,7 @@ const Problemsolution = () => {
                   fontWeight: 700,
                   color: '#0F172A',
                   marginBottom: '12px',
+                  textAlign: 'center',
                 }}
               >
                 {service.title}
@@ -192,6 +194,7 @@ const Problemsolution = () => {
                   lineHeight: 1.5,
                   color: '#475569',
                   flex: 1,
+                  textAlign: 'center',
                 }}
               >
                 {service.description}

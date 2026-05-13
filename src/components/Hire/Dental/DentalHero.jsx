@@ -236,42 +236,85 @@ const DentalHero = () => {
     { 
       title: "Medical Scribe", 
       desc: "Documents encounters in real-time.", 
-      icon: <LuPenLine size={22} color="#4D9BD6" />, 
-      mt: "0px" 
+      icon: <LuPenLine size={22} color="#0F7B6D" />, 
+      bg: "#A8E6D9"
     },
     { 
       title: "Insurance Coord.", 
       desc: "Verifies coverage and pre-auths.", 
-      icon: <LuShieldCheck size={22} color="#4D9BD6" />, 
-      mt: "35px" // Reduced from 45px
+      icon: <LuShieldCheck size={22} color="#0369A1" />, 
+      bg: "#B3D9F2"
     },
     { 
       title: "Billing Coord.", 
       desc: "Processes claims and accounts.", 
-      icon: <LuCreditCard size={22} color="#4D9BD6" />, 
-      mt: "-15px" 
+      icon: <LuCreditCard size={22} color="#B8860B" />, 
+      bg: "#FFEAA7"
     },
     { 
       title: "Scheduling Coord.", 
       desc: "Manages appointments.", 
-      icon: <LuCalendarDays size={22} color="#4D9BD6" />, 
-      mt: "20px" // Reduced from 30px
+      icon: <LuCalendarDays size={22} color="#8B4A7C" />, 
+      bg: "#F0C5D8"
     },
   ];
+
+  const RoleCard = ({ role, isStaggered }) => (
+    <div style={{
+      background: "#FFFFFF",
+      borderRadius: "18px",
+      overflow: "hidden",
+      border: "1px solid #F1F5F9",
+      boxShadow: "0 8px 24px -6px rgba(0,0,0,0.06)",
+      transition: "all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)",
+      marginBottom: "14px",
+      transform: isStaggered ? "translateY(28px)" : "none",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = isStaggered ? "translateY(28px) translateY(-4px)" : "translateY(-6px)";
+      e.currentTarget.style.boxShadow = "0 14px 32px -8px rgba(0,0,0,0.08)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = isStaggered ? "translateY(28px)" : "none";
+      e.currentTarget.style.boxShadow = "0 8px 24px -6px rgba(0,0,0,0.06)";
+    }}
+    >
+      <div style={{ 
+        background: role.bg, 
+        height: "55px", 
+        display: "flex", 
+        alignItems: "center", 
+        justifyContent: "center", 
+        paddingRight: "0px" 
+      }}>
+         <div style={{ 
+           width: "36px", height: "36px", background: "#fff", 
+           borderRadius: "9px", display: "flex", alignItems: "center", 
+           justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" 
+         }}>
+           {role.icon}
+         </div>
+      </div>
+      <div style={{ padding: "14px 18px 16px", textAlign: "center" }}>
+        <h3 style={{ fontSize: "14px", fontWeight: "700", color: "#0F172A", margin: "0 0 4px 0" }}>{role.title}</h3>
+        <p style={{ fontSize: "11px", color: "#64748B", marginBottom: "0px", fontWeight: "500", margin: 0 }}>{role.desc}</p>
+      </div>
+    </div>
+  );
 
   return (
     <section
       className="hero-section"
       style={{
         paddingTop: headerPad,
-        paddingBottom: "120px",
+        paddingBottom: "160px",
         background: "#FFFFFF",
         overflow: "hidden"
       }}
     >
       <div className="container">
-        <div className="row align-items-center g-4">
-
+        <div className="row align-items-center g-5">
+          
           {/* LEFT: Content */}
           <div className="col-lg-6 col-md-12">
             <div style={{ maxWidth: "520px" }}> 
@@ -401,58 +444,15 @@ const DentalHero = () => {
 
           {/* RIGHT: Compact Staggered Grid */}
           <div className="col-lg-6 col-md-12">
-            <div style={{ 
-              display: "flex", 
-              flexWrap: "wrap", 
-              margin: "-6px" // Negative margin to offset card padding
-            }}> 
-              {roles.map((role, i) => (
-                <div key={i} style={{ 
-                  width: "50%", 
-                  padding: "6px", // Small 12px total gap between cards
-                  boxSizing: "border-box"
-                }}>
-                  <div
-                    style={{
-                      marginTop: role.mt,
-                      background: "#FFFFFF",
-                      borderRadius: "14px",
-                      padding: "18px",
-                      border: "1px solid #F1F5F9",
-                      boxShadow: "0 8px 15px -3px rgba(0, 0, 0, 0.03)",
-                      transition: "all 0.3s ease",
-                      cursor: "pointer",
-                      height: "165px", // Slightly shorter for compactness
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between" 
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-4px)";
-                      e.currentTarget.style.boxShadow = "0 15px 20px -5px rgba(124, 58, 237, 0.08)";
-                      e.currentTarget.style.borderColor = "#DDD6FE";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow = "0 8px 15px -3px rgba(0, 0, 0, 0.03)";
-                      e.currentTarget.style.borderColor = "#F1F5F9";
-                    }}
-                  >
-                    <div>
-                      <div style={{ marginBottom: "10px" }}>{role.icon}</div>
-                      <h3 style={{ fontSize: "15px", fontWeight: "700", color: "#0F172A", marginBottom: "4px" }}>
-                        {role.title}
-                      </h3>
-                      <p style={{ color: "#64748B", fontSize: "12.5px", lineHeight: "1.4", margin: 0 }}>
-                        {role.desc}
-                      </p>
-                    </div>
-                    <div style={{ color: "#199A6F", fontWeight: "700", fontSize: "12px", display: "flex", alignItems: "center", gap: "4px" }}>
-                      Learn more →
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div style={{ display: "flex", gap: "18px", position: "relative", paddingLeft: "20px", justifyContent: "center" }}>
+              <div style={{ flex: 0.95, maxWidth: "230px" }}>
+                <RoleCard role={roles[0]} isStaggered={false} />
+                <RoleCard role={roles[2]} isStaggered={false} />
+              </div>
+              <div style={{ flex: 0.95, maxWidth: "230px" }}>
+                <RoleCard role={roles[1]} isStaggered={true} />
+                <RoleCard role={roles[3]} isStaggered={true} />
+              </div>
             </div>
           </div>
 

@@ -1,7 +1,7 @@
 
 import { useState, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
-import { LuPenLine, LuShieldCheck, LuCreditCard, LuCalendarDays } from "react-icons/lu";
+import { FaClipboard, FaCalendarCheck, FaReceipt, FaShieldAlt } from "react-icons/fa";
 
 const MedicalHero = () => {
   const [headerPad, setHeaderPad] = useState("110px");
@@ -21,75 +21,75 @@ const MedicalHero = () => {
       name: "Dr. Shehzil R.", 
       title: "Remote Medical Scribe", 
       badges: ["Epic", "✓ Certified"], 
-      bg: "#A8E6D9", // Original Mint
-      icon: <LuPenLine size={22} color="#0F7B6D" /> 
+      bg: "#A8E6D9", // Mint
+      icon: <FaClipboard size={20} color="#0F7B6D" /> 
     },
     { 
       name: "Fatima L.", 
       title: "Patient Care Coordinator", 
       badges: ["Athenahealth", "✓ Certified"], 
-      bg: "#B3D9F2", // Original Blue
-      icon: <LuCalendarDays size={22} color="#0369A1" /> 
+      bg: "#B3D9F2", // Blue
+      icon: <FaCalendarCheck size={20} color="#0369A1" /> 
     },
     { 
       name: "Emilio P.", 
       title: "Medical Billing Coordinator", 
       badges: ["eCW", "✓ Certified"], 
-      bg: "#FFEAA7", // Original Yellow
-      icon: <LuCreditCard size={22} color="#B8860B" /> 
+      bg: "#FFEAA7", // Yellow
+      icon: <FaReceipt size={20} color="#B8860B" /> 
     },
     { 
       name: "Huma S.", 
       title: "Medical Insurance Coordinator", 
       badges: ["CareCloud", "✓ Certified"], 
-      bg: "#F0C5D8", // Original Pink
-      icon: <LuShieldCheck size={22} color="#8B4A7C" /> 
+      bg: "#F0C5D8", // Pink
+      icon: <FaShieldAlt size={20} color="#8B4A7C" /> 
     },
   ];
 
   const RoleCard = ({ role, isStaggered }) => (
     <div style={{
       background: "#FFFFFF",
-      borderRadius: "24px",
+      borderRadius: "18px",
       overflow: "hidden",
       border: "1px solid #F1F5F9",
-      boxShadow: "0 12px 34px -10px rgba(0,0,0,0.08)",
+      boxShadow: "0 8px 24px -6px rgba(0,0,0,0.06)",
       transition: "all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)",
-      marginBottom: "24px",
-      transform: isStaggered ? "translateY(45px)" : "none",
+      marginBottom: "14px",
+      transform: isStaggered ? "translateY(28px)" : "none",
     }}
     onMouseEnter={(e) => {
-      e.currentTarget.style.transform = isStaggered ? "translateY(35px) translateY(-5px)" : "translateY(-10px)";
-      e.currentTarget.style.boxShadow = "0 20px 40px -12px rgba(0,0,0,0.12)";
+      e.currentTarget.style.transform = isStaggered ? "translateY(28px) translateY(-4px)" : "translateY(-6px)";
+      e.currentTarget.style.boxShadow = "0 14px 32px -8px rgba(0,0,0,0.08)";
     }}
     onMouseLeave={(e) => {
-      e.currentTarget.style.transform = isStaggered ? "translateY(45px)" : "none";
-      e.currentTarget.style.boxShadow = "0 12px 34px -10px rgba(0,0,0,0.08)";
+      e.currentTarget.style.transform = isStaggered ? "translateY(28px)" : "none";
+      e.currentTarget.style.boxShadow = "0 8px 24px -6px rgba(0,0,0,0.06)";
     }}
     >
       <div style={{ 
         background: role.bg, 
-        height: "85px", 
+        height: "55px", 
         display: "flex", 
         alignItems: "center", 
-        justifyContent: "flex-end", 
-        paddingRight: "20px" 
+        justifyContent: "center", 
+        paddingRight: "0px" 
       }}>
          <div style={{ 
-           width: "44px", height: "44px", background: "#fff", 
-           borderRadius: "12px", display: "flex", alignItems: "center", 
-           justifyContent: "center", boxShadow: "0 4px 12px rgba(0,0,0,0.05)" 
+           width: "36px", height: "36px", background: "#fff", 
+           borderRadius: "9px", display: "flex", alignItems: "center", 
+           justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" 
          }}>
            {role.icon}
          </div>
       </div>
-      <div style={{ padding: "20px 24px 24px" }}>
-        <h4 style={{ fontSize: "16px", fontWeight: "700", color: "#0F172A", margin: "0 0 2px 0" }}>{role.name}</h4>
-        <p style={{ fontSize: "13px", color: "#64748B", marginBottom: "16px", fontWeight: "500" }}>{role.title}</p>
-        <div style={{ display: "flex", gap: "8px" }}>
+      <div style={{ padding: "14px 18px 16px" }}>
+        <h4 style={{ fontSize: "14px", fontWeight: "700", color: "#0F172A", margin: "0 0 1px 0" }}>{role.name}</h4>
+        <p style={{ fontSize: "11px", color: "#64748B", marginBottom: "10px", fontWeight: "500" }}>{role.title}</p>
+        <div style={{ display: "flex", gap: "5px", flexWrap: "wrap" }}>
           {role.badges.map((b, i) => (
             <span key={i} style={{
-              fontSize: "11px", fontWeight: "600", padding: "5px 12px", borderRadius: "100px",
+              fontSize: "9px", fontWeight: "600", padding: "3px 8px", borderRadius: "100px",
               background: b.includes("✓") ? "#E8F5E9" : "#EFF6FF",
               color: b.includes("✓") ? "#1B5E20" : "#0369A1",
               border: `1px solid ${b.includes("✓") ? "#A5D6A7" : "#7DD3FC"}`
@@ -171,12 +171,12 @@ const MedicalHero = () => {
 
           {/* VISUAL COLUMN */}
           <div className="col-lg-6">
-            <div style={{ display: "flex", gap: "24px", position: "relative", paddingLeft: "20px" }}>
-              <div style={{ flex: 1 }}>
+            <div style={{ display: "flex", gap: "18px", position: "relative", paddingLeft: "20px", justifyContent: "center" }}>
+              <div style={{ flex: 0.95, maxWidth: "230px" }}>
                 <RoleCard role={roles[0]} isStaggered={false} />
                 <RoleCard role={roles[2]} isStaggered={false} />
               </div>
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: 0.95, maxWidth: "230px" }}>
                 <RoleCard role={roles[1]} isStaggered={true} />
                 <RoleCard role={roles[3]} isStaggered={true} />
               </div>
