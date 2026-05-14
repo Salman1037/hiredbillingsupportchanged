@@ -35,6 +35,7 @@ const RcmFeatureList = () => {
                 backgroundColor: "#e6f7ff",
                 padding: "10px",
                 borderRadius: "50%",
+                 
               }}
             />
             <div>

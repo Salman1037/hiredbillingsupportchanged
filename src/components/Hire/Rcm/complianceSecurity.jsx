@@ -35,18 +35,18 @@ const ComplianceSecuritySection = () => {
       description:
         'Licensed billing agents in all 50 states. Current continuing education and certifications.',
     },
-    {
-      icon: <FaClock />,
-      title: '99.8% Uptime SLA',
-      description:
-        'Redundant systems. 24/7 monitoring. SLA-backed reliability guarantees. Your claims never wait.',
-    },
-    {
-      icon: <FaPhone />,
-      title: '24/7 Priority Support',
-      description:
-        'Dedicated support team available round the clock. Same-day issue resolution. Direct account manager access.',
-    },
+    // {
+    //   icon: <FaClock />,
+    //   title: '99.8% Uptime SLA',
+    //   description:
+    //     'Redundant systems. 24/7 monitoring. SLA-backed reliability guarantees. Your claims never wait.',
+    // },
+    // {
+    //   icon: <FaPhone />,
+    //   title: '24/7 Priority Support',
+    //   description:
+    //     'Dedicated support team available round the clock. Same-day issue resolution. Direct account manager access.',
+    // },
   ];
 
   return (

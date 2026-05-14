@@ -41,7 +41,7 @@ const Rcm = () => {
       <MedicalClaimsBilling />
        {/* <Trustbilling /> */}
        <DedicatedBillers />
-
+  <ComplianceSecuritySection />
       {/* Certifications & Compliance */}
       <Ourcertification />
 
@@ -49,7 +49,7 @@ const Rcm = () => {
       <NationwideAvailability />
 
       {/* Partners & Agencies */}
-      <ComplianceSecuritySection />
+    
       {/* <HBSAgencies /> */}
       <TestimonialsSection />
       <FaqRcm />

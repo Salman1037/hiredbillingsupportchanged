@@ -7,6 +7,7 @@ import {
   FaHandsHelping,
   FaLock,
   FaChartLine,
+ 
 } from 'react-icons/fa';
 
 const WhyChooseSection = () => {
@@ -47,6 +48,19 @@ const WhyChooseSection = () => {
       description:
         'Scale without scaling overhead. Add locations. Add modalities. Add services. We scale with you. Growth is no longer bottlenecked by billing.',
     },
+     {
+      icon: <FaChartLine />,
+      title: 'Transparent Reporting',
+      description:
+        'Clear dashboards, regular updates, and full visibility into claims, collections, denials, and revenue performance at all times.',
+    },
+     {
+      icon: <FaHandsHelping />,
+      title: 'Dedicated Account Support',
+      description:
+        'A responsive team that understands your workflow, resolves issues quickly, and stays aligned with your practice goals.',
+    },
+     
   ];
 
   return (

@@ -7,6 +7,8 @@ import {
   FaHandHoldingUsd,
   FaChartBar,
   FaUsers,
+   FaUserMd,
+  FaPhone,
 } from 'react-icons/fa';
 
 const WhatwemanageSection = () => {
@@ -46,6 +48,18 @@ const WhatwemanageSection = () => {
       title: 'Patient Billing & Collections',
       description:
         'Clear responsibility communication. Payment plan setup. Collection support. Maximize patient revenue without overhead.',
+    },
+    {
+      icon: <FaUserMd />,
+      title: 'Credentialing & Enrollment',
+      description:
+        'Provider enrollment, payer applications, revalidations, and credentialing updates managed to keep billing active and compliant.',
+    },
+    {
+      icon: <FaPhone />,
+      title: 'Reporting & Performance Tracking',
+      description:
+        'Regular reports on claims, payments, denials, AR, and revenue trends so your practice stays fully informed.',
     },
   ];
 
