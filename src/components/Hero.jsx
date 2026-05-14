@@ -424,7 +424,7 @@ function Hero() {
             alt="HBS Hero Animation" 
             style={{
               maxWidth: '100%',
-              width: 'clamp(300px, 90%, 500px)',
+              width: 'clamp(500px, 100%, 1000px)',
               height: 'auto',
               marginTop: 28,
             }}
