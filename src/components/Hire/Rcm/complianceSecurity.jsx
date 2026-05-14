@@ -1,58 +1,58 @@
 
 import React from 'react';
 import {
+  FaLock,
   FaCheckCircle,
   FaShieldAlt,
-  FaTrophy,
-  FaHandsHelping,
-  FaLock,
-  FaChartLine,
+  FaClipboardList,
+  FaClock,
+  FaPhone,
 } from 'react-icons/fa';
 
-const WhyChooseSection = () => {
-  const benefits = [
+const ComplianceSecuritySection = () => {
+  const compliance = [
+    {
+      icon: <FaLock />,
+      title: 'HIPAA Certified',
+      description:
+        'BAA signed before day one. Full HIPAA compliance with annual audits and continuous monitoring.',
+    },
     {
       icon: <FaCheckCircle />,
-      title: 'Specialty Expertise',
+      title: 'SOC 2 Type II',
       description:
-        'Deep knowledge of medical, dental, and behavioral health billing. We understand your specific challenges, payers, and coding requirements.',
+        'Third-party audited security controls. Ongoing compliance verification and trust reports.',
     },
     {
       icon: <FaShieldAlt />,
-      title: 'Proactive Prevention',
+      title: 'Data Encryption',
       description:
-        'We prevent denials before they happen. AI-powered analysis. Proactive strategies. Not just reactive firefighting.',
+        'End-to-end encryption in transit and at rest. Regular security testing and penetration testing.',
     },
     {
-      icon: <FaTrophy />,
-      title: 'Proven Results',
+      icon: <FaClipboardList />,
+      title: 'State Licensing',
       description:
-        '$50M+ recovered for clients. 35%+ dental reduction average. 500+ practices served. Real numbers. Real results.',
+        'Licensed billing agents in all 50 states. Current continuing education and certifications.',
     },
     {
-      icon: <FaHandsHelping />,
-      title: 'Complete Takeover',
+      icon: <FaClock />,
+      title: '99.8% Uptime SLA',
       description:
-        'We own everything. You don\'t manage insurance anymore. Your team focuses on patient care. We manage the revenue.',
+        'Redundant systems. 24/7 monitoring. SLA-backed reliability guarantees. Your claims never wait.',
     },
     {
-      icon: <FaLock />,
-      title: 'Full Compliance',
+      icon: <FaPhone />,
+      title: '24/7 Priority Support',
       description:
-        'HIPAA certified. BAA signed before day one. SOC 2 audited. State licensed. Full documentation. Peace of mind.',
-    },
-    {
-      icon: <FaChartLine />,
-      title: 'Growth Enablement',
-      description:
-        'Scale without scaling overhead. Add locations. Add modalities. Add services. We scale with you. Growth is no longer bottlenecked by billing.',
+        'Dedicated support team available round the clock. Same-day issue resolution. Direct account manager access.',
     },
   ];
 
   return (
     <section
       style={{
-        background: '#FFFFFF',
+        background: '#F5F7FB',
         padding: 'clamp(48px, 8vw, 88px) 0',
         width: '100%',
       }}
@@ -82,7 +82,7 @@ const WhyChooseSection = () => {
               marginBottom: '18px',
             }}
           >
-            Why Choose HBS?
+            Healthcare Compliance & Security
           </h2>
 
           <p
@@ -95,7 +95,7 @@ const WhyChooseSection = () => {
               margin: '0 auto',
             }}
           >
-            We're not a generic billing company. We specialize in what makes your practice unique.
+            Your patient data is protected. Your practice is secure and compliant.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ const WhyChooseSection = () => {
             gap: '18px',
           }}
         >
-          {benefits.map((item, index) => (
+          {compliance.map((item, index) => (
             <div
               key={index}
               style={{
@@ -197,4 +197,4 @@ const WhyChooseSection = () => {
   );
 };
 
-export default WhyChooseSection;
+export default ComplianceSecuritySection;

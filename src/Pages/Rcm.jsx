@@ -1,6 +1,6 @@
 
 import HeroSection from "../components/Hire/Rcm/rcmhero";
-// import WhyChooseSection from "../components/Hire/Rcm/WhyChoose";
+import WhyChooseSection from "../components/Hire/Rcm/WhyChoose";
 import ServicesSection from "../components/Hire/Rcm/ServicesSection";
 import RcmFeatureList from "../components/Hire/Rcm/RcmFeatureList";
 // import StatsSection from "../components/Hire/Rcm/StatsSection";
@@ -12,6 +12,8 @@ import Trustbilling from "../components/Hire/Rcm/Trustbilling";
 import DedicatedBillers from "../components/DedicatedBillers";
 import TestimonialsSection from "../components/TestimonialsSection";
 import FaqRcm from "../components/Hire/Rcm/Rcmfaq";
+import Whatwemanage from "../components/Hire/Rcm/wemenage";
+import ComplianceSecuritySection from "../components/Hire/Rcm/complianceSecurity";
 
 const Rcm = () => {
   return (
@@ -22,8 +24,10 @@ const Rcm = () => {
       {/* Feature/Benefit Cards */}
       <RcmFeatureList />
 
+      <Whatwemanage />
+
       {/* Why Choose HBS Section */}
-      {/* <WhyChooseSection /> */}
+      <WhyChooseSection />
 
       {/* Services Offered Section */}
       <ServicesSection />
@@ -35,7 +39,7 @@ const Rcm = () => {
 
       {/* Medical Claims Billing Details */}
       <MedicalClaimsBilling />
-       <Trustbilling />
+       {/* <Trustbilling /> */}
        <DedicatedBillers />
 
       {/* Certifications & Compliance */}
@@ -45,7 +49,8 @@ const Rcm = () => {
       <NationwideAvailability />
 
       {/* Partners & Agencies */}
-      <HBSAgencies />
+      <ComplianceSecuritySection />
+      {/* <HBSAgencies /> */}
       <TestimonialsSection />
       <FaqRcm />
       

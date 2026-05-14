@@ -89,12 +89,12 @@ const ServicesSection = () => {
 
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             <p style={{ fontSize: "1rem", lineHeight: "1.7", color: "#333", marginBottom: "1.5rem" }}>
-              Our leading medical billing and revenue cycle management company has revolutionized healthcare billing solutions by replacing outdated, error-prone practice management procedures with smart, electronic medical billing services and clinical billing and accounts management solutions for all specialties.
+             HBS is a leading medical billing and revenue cycle management company that replaces outdated practice management procedures with smart, electronic billing services. The result: fast reimbursements, accurate claims, better patient care, and smooth cash flow—all HIPAA-compliant. We deliver comprehensive billing services including:
             </p>
 
-            <p style={{ fontSize: "1rem", lineHeight: "1.7", color: "#333", marginBottom: "1.5rem" }}>
+            {/* <p style={{ fontSize: "1rem", lineHeight: "1.7", color: "#333", marginBottom: "1.5rem" }}>
               The results? <strong>Fast reimbursements, accurate claim transmission, better patient care and smooth cash flow</strong> while adhering to HIPAA-compliant patient claims billing principles. HBS's medical billing management services make them the perfect fit for comprehensive billing services, including:
-            </p>
+            </p> */}
           </div>
         </div>
 

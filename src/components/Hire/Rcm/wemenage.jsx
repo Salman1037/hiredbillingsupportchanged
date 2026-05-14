@@ -2,57 +2,57 @@
 import React from 'react';
 import {
   FaCheckCircle,
-  FaShieldAlt,
-  FaTrophy,
-  FaHandsHelping,
-  FaLock,
-  FaChartLine,
+  FaCloudUploadAlt,
+  FaLightbulb,
+  FaHandHoldingUsd,
+  FaChartBar,
+  FaUsers,
 } from 'react-icons/fa';
 
-const WhyChooseSection = () => {
-  const benefits = [
+const WhatwemanageSection = () => {
+  const services = [
     {
       icon: <FaCheckCircle />,
-      title: 'Specialty Expertise',
+      title: 'Insurance Verification',
       description:
-        'Deep knowledge of medical, dental, and behavioral health billing. We understand your specific challenges, payers, and coding requirements.',
+        'Real-time verification before patient arrival. Benefits, coverage, authorization requirements confirmed. Zero surprises on billing.',
     },
     {
-      icon: <FaShieldAlt />,
-      title: 'Proactive Prevention',
+      icon: <FaCloudUploadAlt />,
+      title: 'Claim Submission',
       description:
-        'We prevent denials before they happen. AI-powered analysis. Proactive strategies. Not just reactive firefighting.',
+        'Accurate coding and electronic submission. Proper authorizations included. 95%+ first-time acceptance across all specialties.',
     },
     {
-      icon: <FaTrophy />,
-      title: 'Proven Results',
+      icon: <FaLightbulb />,
+      title: 'Denial Prevention & Appeals',
       description:
-        '$50M+ recovered for clients. 35%+ dental reduction average. 500+ practices served. Real numbers. Real results.',
+        'AI-powered root cause analysis. Proactive prevention before denials happen. Aggressive appeals for every rejected claim. 35%+ reduction average.',
     },
     {
-      icon: <FaHandsHelping />,
-      title: 'Complete Takeover',
+      icon: <FaHandHoldingUsd />,
+      title: 'Payment Processing',
       description:
-        'We own everything. You don\'t manage insurance anymore. Your team focuses on patient care. We manage the revenue.',
+        'Insurance follow-up and claims tracing. Payment posting and reconciliation. Fast reimbursements (32-40 day average AR).',
     },
     {
-      icon: <FaLock />,
-      title: 'Full Compliance',
+      icon: <FaChartBar />,
+      title: 'Real-Time Revenue Visibility',
       description:
-        'HIPAA certified. BAA signed before day one. SOC 2 audited. State licensed. Full documentation. Peace of mind.',
+        'Dashboards showing dental trends, claim status, reimbursement forecasts. You know exactly where your money is at all times.',
     },
     {
-      icon: <FaChartLine />,
-      title: 'Growth Enablement',
+      icon: <FaUsers />,
+      title: 'Patient Billing & Collections',
       description:
-        'Scale without scaling overhead. Add locations. Add modalities. Add services. We scale with you. Growth is no longer bottlenecked by billing.',
+        'Clear responsibility communication. Payment plan setup. Collection support. Maximize patient revenue without overhead.',
     },
   ];
 
   return (
     <section
       style={{
-        background: '#FFFFFF',
+        background: '#F5F7FB',
         padding: 'clamp(48px, 8vw, 88px) 0',
         width: '100%',
       }}
@@ -82,7 +82,7 @@ const WhyChooseSection = () => {
               marginBottom: '18px',
             }}
           >
-            Why Choose HBS?
+            What We Manage For You
           </h2>
 
           <p
@@ -95,7 +95,7 @@ const WhyChooseSection = () => {
               margin: '0 auto',
             }}
           >
-            We're not a generic billing company. We specialize in what makes your practice unique.
+            End-to-end revenue cycle management. Every step. Every claim. Every dollar.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ const WhyChooseSection = () => {
             gap: '18px',
           }}
         >
-          {benefits.map((item, index) => (
+          {services.map((item, index) => (
             <div
               key={index}
               style={{
@@ -197,4 +197,4 @@ const WhyChooseSection = () => {
   );
 };
 
-export default WhyChooseSection;
+export default WhatwemanageSection;
